@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/images/logo-turnbold.png';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -49,7 +50,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       >
         <div className="flex items-center justify-between py-4 mb-8">
           <img 
-            src="/logo-turnbold.png" 
+            src={logo} 
             alt="TurnBold"
             className="h-12 w-auto"
           />

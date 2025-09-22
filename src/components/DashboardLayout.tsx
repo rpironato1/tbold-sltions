@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import { Button } from '@/components/ui/button';
-import { PanelLeft, X } from '@/components/icons';
+import { PanelLeft } from '@/components/icons';
+import logo from '@/assets/images/logo-turnbold.png';
 
 const DashboardLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -24,7 +25,7 @@ const DashboardLayout = () => {
             <PanelLeft className="h-6 w-6" />
           </Button>
           <img 
-            src="/logo-turnbold.png" 
+            src={logo} 
             alt="TurnBold"
             className="h-8 w-auto"
           />
