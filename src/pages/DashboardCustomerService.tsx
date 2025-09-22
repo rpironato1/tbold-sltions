@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { Search, Filter, Mail, Eye, Archive, MessageSquare } from '@/components/icons';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,18 +15,13 @@ import { toast } from 'sonner';
 import type { Database } from '@/integrations/supabase/types';
 import FormDetails from '@/components/FormDetails';
 
-type Form = Database['public']['Views']['all_forms']['Row'] & { status: 'new' | 'read' | 'responded' | 'archived' };
+type FormStatus = 'new' | 'read' | 'responded' | 'archived';
+type Form = Database['public']['Views']['all_forms']['Row'] & { status: FormStatus };
 
 const fetchForms = async (): Promise<Form[]> => {
   const { data, error } = await supabase.from('all_forms').select('*');
   if (error) throw error;
-  
-  const formsWithStatus: Form[] = data.map(form => ({
-    ...form,
-    status: 'new' as const
-  }));
-
-  return formsWithStatus.sort((a, b) => new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime());
+  return (data as Form[]).sort((a, b) => new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime());
 };
 
 const DashboardCustomerService = () => {
@@ -43,19 +38,30 @@ const DashboardCustomerService = () => {
   const [replySubject, setReplySubject] = useState('');
   const [replyMessage, setReplyMessage] = useState('');
 
-  useEffect(() => {
-    const channel = supabase
-      .channel('public-all_forms')
-      .on('postgres_changes', { event: '*', schema: 'public' }, (payload) => {
-        console.log('Change received!', payload);
-        queryClient.invalidateQueries({ queryKey: ['forms'] });
-      })
-      .subscribe();
+  const updateStatusMutation = useMutation({
+    mutationFn: async ({ id, form_type, status }: { id: string; form_type: string | null; status: FormStatus }) => {
+      let tableName: 'contacts' | 'leads' | 'briefings';
+      if (form_type === 'contact') {
+        tableName = 'contacts';
+      } else if (form_type === 'lead') {
+        tableName = 'leads';
+      } else if (form_type === 'briefing') {
+        tableName = 'briefings';
+      } else {
+        throw new Error('Invalid form type');
+      }
 
-    return () => {
-      supabase.removeChannel(channel);
-    };
-  }, [queryClient]);
+      const { error } = await supabase.from(tableName).update({ status }).eq('id', id);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['forms'] });
+      toast.success(t('customerService.statusUpdated'));
+    },
+    onError: (error: Error) => {
+      toast.error(error.message);
+    }
+  });
 
   const filteredForms = forms.filter(form => {
     const searchLower = searchTerm.toLowerCase();
@@ -78,14 +84,14 @@ const DashboardCustomerService = () => {
     archived: forms.filter(f => f.status === 'archived').length,
   };
 
-  const getStatusBadge = (status: string = 'new') => {
+  const getStatusBadge = (status: string | null) => {
     const variants: Record<string, 'default' | 'secondary' | 'destructive' | 'outline'> = {
       new: 'destructive',
       read: 'secondary',
       responded: 'default',
       archived: 'outline'
     };
-    return <Badge variant={variants[status] || 'default'}>{t(`common.${status}`)}</Badge>;
+    return <Badge variant={variants[status || 'new'] || 'default'}>{t(`common.${status || 'new'}`)}</Badge>;
   };
 
   const getOriginLabel = (formType: string | null) => t(`customerService.formOrigins.${formType || 'unknown'}`, formType || 'Unknown');
@@ -93,6 +99,9 @@ const DashboardCustomerService = () => {
   const handleFormClick = (form: Form) => {
     setSelectedForm(form);
     setIsDetailsOpen(true);
+    if (form.status === 'new') {
+      updateStatusMutation.mutate({ id: form.id!, form_type: form.form_type, status: 'read' });
+    }
   };
 
   const handleReplyClick = (form: Form) => {
@@ -106,7 +115,12 @@ const DashboardCustomerService = () => {
   const handleSendReply = () => {
     if (!selectedForm) return;
     toast.success(t('customerService.responseEmailSent'));
+    updateStatusMutation.mutate({ id: selectedForm.id!, form_type: selectedForm.form_type, status: 'responded' });
     setIsReplyOpen(false);
+  };
+
+  const handleArchive = (form: Form) => {
+    updateStatusMutation.mutate({ id: form.id!, form_type: form.form_type, status: 'archived' });
   };
 
   return (
@@ -149,7 +163,7 @@ const DashboardCustomerService = () => {
                     <TableCell className="font-medium">{form.name}</TableCell>
                     <TableCell>{form.email}</TableCell>
                     <TableCell>{form.created_at ? new Date(form.created_at).toLocaleDateString() : 'N/A'}</TableCell>
-                    <TableCell className="text-right"><div className="flex gap-2 justify-end"><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleFormClick(form); }}><Eye className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4" /></Button><Button size="sm" variant="outline"><Archive className="w-4 h-4" /></Button></div></TableCell>
+                    <TableCell className="text-right"><div className="flex gap-2 justify-end"><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleFormClick(form); }}><Eye className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleArchive(form); }}><Archive className="w-4 h-4" /></Button></div></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

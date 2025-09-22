@@ -22,6 +22,7 @@ export interface Database {
           name: string
           phone: string
           project_type: string | null
+          status: string
           timeline: string | null
         }
         Insert: {
@@ -36,6 +37,7 @@ export interface Database {
           name: string
           phone: string
           project_type?: string | null
+          status?: string
           timeline?: string | null
         }
         Update: {
@@ -50,6 +52,7 @@ export interface Database {
           name?: string
           phone?: string
           project_type?: string | null
+          status?: string
           timeline?: string | null
         }
         Relationships: []
@@ -64,6 +67,7 @@ export interface Database {
           message: string
           name: string
           phone: string
+          status: string
           subject: string
         }
         Insert: {
@@ -75,6 +79,7 @@ export interface Database {
           message: string
           name: string
           phone: string
+          status?: string
           subject: string
         }
         Update: {
@@ -86,6 +91,7 @@ export interface Database {
           message?: string
           name?: string
           phone?: string
+          status?: string
           subject?: string
         }
         Relationships: []
@@ -98,6 +104,7 @@ export interface Database {
           message: string | null
           name: string
           phone: string
+          status: string
         }
         Insert: {
           created_at?: string
@@ -106,6 +113,7 @@ export interface Database {
           message?: string | null
           name: string
           phone: string
+          status?: string
         }
         Update: {
           created_at?: string
@@ -114,6 +122,7 @@ export interface Database {
           message?: string | null
           name?: string
           phone?: string
+          status?: string
         }
         Relationships: []
       }
@@ -135,6 +144,7 @@ export interface Database {
           name: string | null
           phone: string | null
           project_type: string | null
+          status: string | null
           subject: string | null
           timeline: string | null
         }
@@ -153,6 +163,7 @@ export interface Database {
           name?: string | null
           phone?: string | null
           project_type?: string | null
+          status?: string | null
           subject?: string | null
           timeline?: string | null
         }
@@ -171,6 +182,7 @@ export interface Database {
           name?: string | null
           phone?: string | null
           project_type?: string | null
+          status?: string | null
           subject?: string | null
           timeline?: string | null
         }
