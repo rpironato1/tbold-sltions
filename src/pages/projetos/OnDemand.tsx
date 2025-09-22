@@ -211,88 +211,36 @@ const OnDemand = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Briefing Form Section */}
       <section className="section-padding bg-turnbold-bg">
         <div className="container-max">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">{t('ondemand.benefits.title')}</h2>
-            <p className="text-xl text-turnbold-text max-w-3xl mx-auto">
-              {t('ondemand.benefits.description')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center border-turnbold-border">
-                <CardContent className="pt-8">
-                  <div className="text-4xl font-bold text-turnbold-green mb-2">
-                    {benefit.metric}
-                  </div>
-                  <p className="text-turnbold-text font-medium">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="section-padding">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">{t('ondemand.testimonials.title')}</h2>
-            <p className="text-xl text-turnbold-text max-w-3xl mx-auto">
-              {t('ondemand.testimonials.description')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-turnbold-border">
-                <CardContent className="p-8">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={20} className="text-turnbold-yellow fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-turnbold-text mb-6 italic text-lg">
-                    "{testimonial.comment}"
-                  </p>
-                  <div className="flex items-center">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full mr-4"
-                    />
-                    <div>
-                      <p className="font-semibold text-turnbold-dark text-lg">{testimonial.name}</p>
-                      <p className="text-turnbold-text">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-turnbold-dark text-white">
-        <div className="container-max text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">{t('ondemand.cta.title')}</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {t('ondemand.cta.description')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-primary text-lg px-8 py-4">
-              {t('common.startFreeTrial')}
-            </Button>
-            <Button className="btn-secondary border-white text-white hover:bg-white hover:text-turnbold-dark text-lg px-8 py-4">
-              {t('common.talkToSpecialist')}
-            </Button>
-          </div>
+          <Card className="border-turnbold-border max-w-4xl mx-auto">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">Solicite um Orçamento</CardTitle>
+              <CardDescription>Preencha o briefing abaixo para iniciarmos a conversa sobre seu projeto.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input placeholder="Nome Completo *" value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} required disabled={isSubmitting} />
+                  <Input type="email" placeholder="E-mail *" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} required disabled={isSubmitting} />
+                  <Input type="tel" placeholder="Telefone *" value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} required disabled={isSubmitting} />
+                  <Input placeholder="Empresa" value={formData.company} onChange={(e) => handleInputChange('company', e.target.value)} disabled={isSubmitting} />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <Select onValueChange={(v) => handleInputChange('project_type', v)} disabled={isSubmitting}><SelectTrigger><SelectValue placeholder="Tipo de Projeto" /></SelectTrigger><SelectContent><SelectItem value="web">Site/App Web</SelectItem><SelectItem value="mobile">App Mobile</SelectItem><SelectItem value="ia">Solução com IA</SelectItem><SelectItem value="outro">Outro</SelectItem></SelectContent></Select>
+                  <Select onValueChange={(v) => handleInputChange('budget', v)} disabled={isSubmitting}><SelectTrigger><SelectValue placeholder="Orçamento Estimado" /></SelectTrigger><SelectContent><SelectItem value="<5k">Abaixo de R$5.000</SelectItem><SelectItem value="5k-15k">R$5.000 - R$15.000</SelectItem><SelectItem value="15k-30k">R$15.000 - R$30.000</SelectItem><SelectItem value=">30k">Acima de R$30.000</SelectItem></SelectContent></Select>
+                  <Select onValueChange={(v) => handleInputChange('timeline', v)} disabled={isSubmitting}><SelectTrigger><SelectValue placeholder="Prazo Desejado" /></SelectTrigger><SelectContent><SelectItem value="1-3m">1-3 meses</SelectItem><SelectItem value="3-6m">3-6 meses</SelectItem><SelectItem value="6m+">Mais de 6 meses</SelectItem></SelectContent></Select>
+                </div>
+                <Textarea placeholder="Descrição detalhada do projeto *" value={formData.description} onChange={(e) => handleInputChange('description', e.target.value)} required disabled={isSubmitting} rows={5} />
+                <Textarea placeholder="Principais funcionalidades desejadas" value={formData.features} onChange={(e) => handleInputChange('features', e.target.value)} disabled={isSubmitting} />
+                <Textarea placeholder="Sistemas ou APIs para integração" value={formData.integrations} onChange={(e) => handleInputChange('integrations', e.target.value)} disabled={isSubmitting} />
+                <Button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
+                  {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Send className="w-5 h-5 mr-2" /> Enviar Briefing</>}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
