@@ -30,7 +30,7 @@ const DashboardHome = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-turnbold-dark mb-2">
+      <h1 className="text-2xl md:text-3xl font-bold text-turnbold-dark mb-2">
         Welcome, {user?.email?.split('@')[0] || 'Admin'}!
       </h1>
       <p className="text-gray-600 mb-8">Here is a summary of recent activities.</p>
@@ -41,7 +41,7 @@ const DashboardHome = () => {
             <CardTitle>Received Contacts</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-4xl font-bold">{stats.contacts}</p>
+            <p className="text-3xl md:text-4xl font-bold">{stats.contacts}</p>
           </CardContent>
         </Card>
         <Card>
@@ -49,7 +49,7 @@ const DashboardHome = () => {
             <CardTitle>Captured Leads</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-4xl font-bold">{stats.leads}</p>
+            <p className="text-3xl md:text-4xl font-bold">{stats.leads}</p>
           </CardContent>
         </Card>
         <Card>
@@ -57,7 +57,7 @@ const DashboardHome = () => {
             <CardTitle>Sent Briefings</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-4xl font-bold">{stats.briefings}</p>
+            <p className="text-3xl md:text-4xl font-bold">{stats.briefings}</p>
           </CardContent>
         </Card>
       </div>
