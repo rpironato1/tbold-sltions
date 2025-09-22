@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { UserPlus, Loader2 } from '@/components/icons';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { saveUserSession } from '@/lib/formStorage';
+import { toast } from 'sonner';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -21,17 +21,17 @@ const SignUp = () => {
   const [invitationCode, setInvitationCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
-    setSuccessMessage(null);
 
-    // Validation of invitation code
-    if (invitationCode !== '#ADMIN') {
-      setError(t('signUp.errors.invalidCode'));
+    // Validação do código de convite obrigatório
+    if (invitationCode !== '777777') {
+      const errorMessage = t('signUp.errors.invalidCode');
+      setError(errorMessage);
+      toast.error(t('signUp.errors.title'), { description: errorMessage });
       setIsLoading(false);
       return;
     }
@@ -45,19 +45,10 @@ const SignUp = () => {
 
     if (error) {
       setError(error.message);
+      toast.error(t('signUp.errors.title'), { description: error.message });
     } else if (data.user) {
-      // Save user session for future reference
-      try {
-        saveUserSession(email, false);
-        console.log('User session saved after successful signup');
-      } catch (sessionError) {
-        console.error('Error saving user session:', sessionError);
-      }
-
-      // By default, Supabase may require email confirmation.
-      // We inform the user about this.
-      setSuccessMessage(t('signUp.success.message'));
-      setTimeout(() => navigate('/login'), 3000); // Redirect to login after 3s
+      toast.success(t('signUp.success.title'), { description: t('signUp.success.message') });
+      setTimeout(() => navigate('/login'), 3000);
     }
   };
 
@@ -89,12 +80,6 @@ const SignUp = () => {
                   <Alert variant="destructive">
                     <AlertTitle>{t('signUp.errors.title')}</AlertTitle>
                     <AlertDescription>{error}</AlertDescription>
-                  </Alert>
-                )}
-                {successMessage && (
-                  <Alert variant="default">
-                    <AlertTitle>{t('signUp.success.title')}</AlertTitle>
-                    <AlertDescription>{successMessage}</AlertDescription>
                   </Alert>
                 )}
                 <div className="space-y-2">

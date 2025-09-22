@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import { supabase } from '@/integrations/supabase/client';
@@ -10,40 +10,20 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { LogIn, Loader2 } from '@/components/icons';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { saveUserSession, getLastUserSession } from '@/lib/formStorage';
+import { toast } from 'sonner';
 
 const Login = () => {
   const { t } = useTypedTranslation('pages');
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Load saved session data if "remember me" was checked
-  useEffect(() => {
-    const lastSession = getLastUserSession();
-    if (lastSession && lastSession.rememberMe) {
-      setEmail(lastSession.email);
-      setRememberMe(true);
-    }
-  }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
-
-    // Save session data before attempting login
-    if (rememberMe) {
-      try {
-        saveUserSession(email, rememberMe);
-        console.log('User session saved for remember me functionality');
-      } catch (error) {
-        console.error('Error saving user session:', error);
-      }
-    }
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -54,15 +34,9 @@ const Login = () => {
 
     if (error) {
       setError(error.message);
+      toast.error(t('login.errors.title'), { description: error.message });
     } else {
-      // Update session with successful login
-      if (rememberMe) {
-        try {
-          saveUserSession(email, rememberMe);
-        } catch (error) {
-          console.error('Error updating user session:', error);
-        }
-      }
+      toast.success(t('navigation.login'));
       navigate('/dashboard');
     }
   };
@@ -122,8 +96,6 @@ const Login = () => {
                     id="remember" 
                     className="h-4 w-4" 
                     disabled={isLoading}
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
                   />
                   <Label htmlFor="remember" className="ml-2 text-sm">{t('login.remember')}</Label>
                 </div>

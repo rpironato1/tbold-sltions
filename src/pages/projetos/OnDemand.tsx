@@ -26,10 +26,7 @@ import {
 } from '@/components/icons';
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import SEOHead from '@/components/SEOHead';
-import { storeFormData, markFormAsSubmitted, validateFormData, convertToSupabaseFormat } from '@/lib/formStorage';
-import type { Database } from '@/integrations/supabase/types';
-
-type BriefingInsert = Database['public']['Tables']['briefings']['Insert'];
+import { toast } from 'sonner';
 
 const OnDemand = () => {
   const { t } = useTypedTranslation('projects');
@@ -38,7 +35,7 @@ const OnDemand = () => {
     email: '',
     phone: '',
     company: '',
-    projectType: '',
+    project_type: '',
     budget: '',
     timeline: '',
     description: '',
@@ -55,51 +52,23 @@ const OnDemand = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Validate form data
-    const briefingData = {
-      formType: 'briefing' as const,
-      ...formData
-    };
-
-    if (!validateFormData(briefingData)) {
-      alert('Please fill in all required fields correctly.');
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Store in localStorage first
-    let formId: string;
-    try {
-      formId = storeFormData(briefingData);
-      console.log('Briefing data stored in localStorage with ID:', formId);
-    } catch (error) {
-      console.error('Error storing briefing data locally:', error);
-      alert(`Error saving form data locally: ${error instanceof Error ? error.message : 'Unknown error'}`);
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Convert to Supabase format and submit
-    const supabaseData = convertToSupabaseFormat(briefingData);
     const { error } = await supabase
       .from('briefings')
-      .insert([supabaseData as BriefingInsert]);
+      .insert([formData]);
 
     setIsSubmitting(false);
 
     if (error) {
       console.error('Error sending briefing:', error);
-      alert(`Error sending briefing: ${error.message}\n\nYour data has been saved locally and will be synchronized when the connection is restored.`);
+      toast.error(`Error sending briefing: ${error.message}`);
     } else {
-      // Mark as submitted in localStorage
-      markFormAsSubmitted(formId);
-      alert('Briefing sent successfully! Our team will contact you within 4 business hours.');
+      toast.success('Briefing sent successfully! Our team will contact you within 4 business hours.');
       setFormData({
         name: '',
         email: '',
         phone: '',
         company: '',
-        projectType: '',
+        project_type: '',
         budget: '',
         timeline: '',
         description: '',

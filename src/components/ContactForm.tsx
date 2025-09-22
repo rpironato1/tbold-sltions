@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Send, Loader2 } from '@/components/icons';
-import { storeFormData, markFormAsSubmitted, validateFormData } from '@/lib/formStorage';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
   const { t } = useTypedTranslation('pages');
@@ -30,31 +30,6 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Validate form data
-    const contactData = {
-      formType: 'contact' as const,
-      ...formData
-    };
-
-    if (!validateFormData(contactData)) {
-      alert(t('contact.form.validationError'));
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Store in localStorage first
-    let formId: string;
-    try {
-      formId = storeFormData(contactData);
-      console.log('Contact data stored in localStorage with ID:', formId);
-    } catch (error) {
-      console.error('Error storing contact data locally:', error);
-      alert(`${t('contact.form.storageError')} ${error instanceof Error ? error.message : 'Unknown error'}`);
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Attempt to submit to Supabase
     const { error } = await supabase
       .from('contacts')
       .insert([formData]);
@@ -63,11 +38,9 @@ const ContactForm = () => {
 
     if (error) {
       console.error('Error sending form:', error);
-      alert(`${t('contact.form.error')} ${error.message}\n\n${t('contact.form.savedLocal')}`);
+      toast.error(`${t('contact.form.error')} ${error.message}`);
     } else {
-      // Mark as submitted in localStorage
-      markFormAsSubmitted(formId);
-      alert(t('contact.form.success'));
+      toast.success(t('contact.form.success'));
       setFormData({
         name: '',
         email: '',

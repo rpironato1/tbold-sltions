@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from 'react';
 import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
@@ -13,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Star, ChevronLeft, ChevronRight, Code, Users, Zap, Building2, Send, CheckCircle, Trophy, Target, Lightbulb, Shield, Clock, Sparkles, Rocket, TrendingUp, Loader2 } from '@/components/icons';
-import { storeFormData, markFormAsSubmitted, validateFormData } from '@/lib/formStorage';
+import { toast } from 'sonner';
 
 const Index = () => {
   const { t } = useTypedTranslation('pages');
@@ -83,31 +82,6 @@ const Index = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Validate form data
-    const leadData = {
-      formType: 'lead' as const,
-      ...formData
-    };
-
-    if (!validateFormData(leadData)) {
-      alert(t('index.contact.form.validationError'));
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Store in localStorage first
-    let formId: string;
-    try {
-      formId = storeFormData(leadData);
-      console.log('Lead data stored in localStorage with ID:', formId);
-    } catch (error) {
-      console.error('Error storing lead data locally:', error);
-      alert(`${t('index.contact.form.storageError')} ${error instanceof Error ? error.message : 'Unknown error'}`);
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Attempt to submit to Supabase
     const { error } = await supabase
       .from('leads')
       .insert([formData]);
@@ -116,11 +90,9 @@ const Index = () => {
 
     if (error) {
       console.error('Error capturing lead:', error);
-      alert(`${t('index.contact.form.error')} ${error.message}\n\n${t('index.contact.form.savedLocal')}`);
+      toast.error(`${t('index.contact.form.error')} ${error.message}`);
     } else {
-      // Mark as submitted in localStorage
-      markFormAsSubmitted(formId);
-      alert(t('index.contact.form.success'));
+      toast.success(t('index.contact.form.success'));
       setFormData({ name: '', email: '', phone: '', message: '' });
     }
   };
@@ -626,9 +598,15 @@ const Index = () => {
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     className="border-2 border-gray-200 focus:border-turnbold-green min-h-40 text-lg resize-none rounded-2xl"
                   />
-                  <Button type="submit" className="btn-primary w-full h-20 text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-turnbold-green to-green-600 rounded-2xl border-0">
-                    <Send size={28} className="mr-4" />
-                    {t('index.contact.form.button')}
+                  <Button type="submit" className="btn-primary w-full h-20 text-lg font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-turnbold-green to-green-600 rounded-2xl border-0" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <Loader2 className="w-6 h-6 animate-spin" />
+                    ) : (
+                      <>
+                        <Send size={28} className="mr-4" />
+                        {t('index.contact.form.button')}
+                      </>
+                    )}
                   </Button>
                   <p className="text-base text-gray-500 text-center">
                     {t('index.contact.form.required')}
