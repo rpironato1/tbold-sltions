@@ -474,6 +474,13 @@
           "comment": "The integration was perfect! Now we automatically offer multiple delivery options."
         }
       ]
+    },
+    "form": {
+      "title": "Request a Quote",
+      "description": "Fill out the briefing below to start the conversation about your project.",
+      "button": "Send Briefing",
+      "success": "Briefing sent successfully! Our team will contact you within 4 business hours.",
+      "error": "Error sending briefing:"
     }
   }
 }

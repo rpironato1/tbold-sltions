@@ -60,9 +60,9 @@ const OnDemand = () => {
 
     if (error) {
       console.error('Error sending briefing:', error);
-      toast.error(`Error sending briefing: ${error.message}`);
+      toast.error(`${t('ondemand.form.error')} ${error.message}`);
     } else {
-      toast.success('Briefing sent successfully! Our team will contact you within 4 business hours.');
+      toast.success(t('ondemand.form.success'));
       setFormData({
         name: '',
         email: '',
@@ -108,30 +108,6 @@ const OnDemand = () => {
       icon: <CheckCircle className="w-6 h-6 text-turnbold-green" />,
       title: t('ondemand.features.5.title'),
       description: t('ondemand.features.5.description')
-    }
-  ];
-
-  const benefits = [
-    { metric: t('ondemand.benefits.metrics.0.metric'), description: t('ondemand.benefits.metrics.0.description') },
-    { metric: t('ondemand.benefits.metrics.1.metric'), description: t('ondemand.benefits.metrics.1.description') },
-    { metric: t('ondemand.benefits.metrics.2.metric'), description: t('ondemand.benefits.metrics.2.description') },
-    { metric: t('ondemand.benefits.metrics.3.metric'), description: t('ondemand.benefits.metrics.3.description') }
-  ];
-
-  const testimonials = [
-    {
-      name: t('ondemand.testimonials.items.0.name'),
-      role: t('ondemand.testimonials.items.0.role'),
-      comment: t('ondemand.testimonials.items.0.comment'),
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: t('ondemand.testimonials.items.1.name'),
-      role: t('ondemand.testimonials.items.1.role'),
-      comment: t('ondemand.testimonials.items.1.comment'),
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
     }
   ];
 
@@ -216,8 +192,8 @@ const OnDemand = () => {
         <div className="container-max">
           <Card className="border-turnbold-border max-w-4xl mx-auto">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold">Solicite um Orçamento</CardTitle>
-              <CardDescription>Preencha o briefing abaixo para iniciarmos a conversa sobre seu projeto.</CardDescription>
+              <CardTitle className="text-3xl font-bold">{t('ondemand.form.title')}</CardTitle>
+              <CardDescription>{t('ondemand.form.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -236,7 +212,7 @@ const OnDemand = () => {
                 <Textarea placeholder="Principais funcionalidades desejadas" value={formData.features} onChange={(e) => handleInputChange('features', e.target.value)} disabled={isSubmitting} />
                 <Textarea placeholder="Sistemas ou APIs para integração" value={formData.integrations} onChange={(e) => handleInputChange('integrations', e.target.value)} disabled={isSubmitting} />
                 <Button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
-                  {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Send className="w-5 h-5 mr-2" /> Enviar Briefing</>}
+                  {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Send className="w-5 h-5 mr-2" /> {t('ondemand.form.button')}</>}
                 </Button>
               </form>
             </CardContent>

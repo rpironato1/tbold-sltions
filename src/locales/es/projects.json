@@ -209,7 +209,7 @@
           },
           {
             "title": "useDietPlans.ts",
-            "description": "Centraliza la complejidad de gestión de planes alimentarios"
+            "description": "Centraliza la complexidad de gestión de planes alimentarios"
           },
           {
             "title": "useSessions.ts",
@@ -474,6 +474,13 @@
           "comment": "¡La integración fue perfecta! Ahora ofrecemos múltiples opciones de entrega automáticamente."
         }
       ]
+    },
+    "form": {
+      "title": "Solicita un Presupuesto",
+      "description": "Completa el briefing a continuación para iniciar la conversación sobre tu proyecto.",
+      "button": "Enviar Briefing",
+      "success": "¡Briefing enviado con éxito! Nuestro equipo se pondrá en contacto en hasta 4 horas hábiles.",
+      "error": "Error al enviar el briefing:"
     }
   }
 }

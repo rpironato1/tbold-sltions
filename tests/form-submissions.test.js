@@ -77,7 +77,7 @@ test.describe('TurnBold Solutions - E2E Form Submission Tests', () => {
     await page.locator('button:has-text("Enviar Briefing")').click();
 
     // Verifica a notificação de sucesso (toast)
-    const successToast = page.locator('[role="status"]:has-text("Briefing sent successfully!")');
+    const successToast = page.locator('[role="status"]:has-text("Briefing enviado com sucesso! Nossa equipe entrará em contato em até 4 horas úteis.")');
     await expect(successToast).toBeVisible({ timeout: 10000 });
   });
 

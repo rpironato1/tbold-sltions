@@ -474,6 +474,13 @@
           "comment": "A integração foi perfeita! Agora oferecemos múltiplas opções de entrega automaticamente."
         }
       ]
+    },
+    "form": {
+      "title": "Solicite um Orçamento",
+      "description": "Preencha o briefing abaixo para iniciarmos a conversa sobre seu projeto.",
+      "button": "Enviar Briefing",
+      "success": "Briefing enviado com sucesso! Nossa equipe entrará em contato em até 4 horas úteis.",
+      "error": "Erro ao enviar o briefing:"
     }
   }
 }
