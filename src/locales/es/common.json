@@ -19,7 +19,8 @@
     "signOut": "Cerrar sesión",
     "hireNow": "Contratar ahora",
     "customerService": "Atención al Cliente",
-    "forms": "Formularios"
+    "forms": "Formularios",
+    "backToHome": "Volver a la página de inicio"
   },
   "common": {
     "loading": "Cargando...",

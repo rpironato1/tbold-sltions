@@ -19,7 +19,8 @@
     "signOut": "Sign Out",
     "hireNow": "Hire Now",
     "customerService": "Customer Service",
-    "forms": "Forms"
+    "forms": "Forms",
+    "backToHome": "Back to Home"
   },
   "common": {
     "loading": "Loading...",

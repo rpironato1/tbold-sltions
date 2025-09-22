@@ -19,7 +19,8 @@
     "signOut": "Sair",
     "hireNow": "Contratar Agora",
     "customerService": "Atendimento",
-    "forms": "Formulários"
+    "forms": "Formulários",
+    "backToHome": "Voltar para a página inicial"
   },
   "common": {
     "loading": "Carregando...",
