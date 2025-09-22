@@ -8,8 +8,10 @@ import { HelmetProvider } from "react-helmet-async";
 import LoadingSpinner from "./components/LoadingSpinner";
 
 // ========== IMPORTAÇÕES CRÍTICAS (CARREGAMENTO IMEDIATO) ==========
-// Página inicial carregada diretamente para performance máxima
+// Página inicial e de autenticação carregadas diretamente para performance máxima
 import Index from "./pages/Index";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 // ========== PÁGINAS PRINCIPAIS (PRIORIDADE ALTA) ==========
 // Páginas mais acessadas pelos usuários - carregamento prioritário
@@ -22,11 +24,6 @@ const Contato = lazy(() => import("./pages/Contato"));
 const Blog = lazy(() => import("./pages/Blog"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Assinaturas = lazy(() => import("./pages/Assinaturas"));
-
-// ========== AUTENTICAÇÃO (PRIORIDADE MÉDIA-BAIXA) ==========
-// Páginas de login e cadastro - carregadas sob demanda
-const Login = lazy(() => import("./pages/Login"));
-const SignUp = lazy(() => import("./pages/SignUp"));
 
 // ========== PROJETOS ESPECÍFICOS (PRIORIDADE MÉDIA-BAIXA) ==========
 // Páginas de detalhes de projetos - carregadas quando necessário
