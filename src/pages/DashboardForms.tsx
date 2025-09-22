@@ -4,10 +4,11 @@ import { supabase } from '@/integrations/supabase/client';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Loader2 } from '@/components/icons';
 import FormDetails from '@/components/FormDetails';
 import type { Database } from '@/integrations/supabase/types';
+import { useTranslation } from 'react-i18next';
 
 type Form = Database['public']['Views']['all_forms']['Row'];
 
@@ -18,6 +19,7 @@ const fetchAllForms = async (): Promise<Form[]> => {
 };
 
 const DashboardForms = () => {
+  const { t } = useTranslation();
   const { data: allForms = [], isLoading } = useQuery<Form[]>({ queryKey: ['all_forms'], queryFn: fetchAllForms });
   const [selectedItem, setSelectedItem] = useState<Form | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -112,7 +114,8 @@ const DashboardForms = () => {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="sm:max-w-2xl">
           <DialogHeader>
-            <DialogTitle>Detalhes do Formulário</DialogTitle>
+            <DialogTitle>{t('customerService.formDetails')}</DialogTitle>
+            <DialogDescription>{t('customerService.formDetailsDescription')}</DialogDescription>
           </DialogHeader>
           <div className="py-4 max-h-[70vh] overflow-y-auto">
             <FormDetails form={selectedItem} />
