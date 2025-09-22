@@ -13,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { toast } from 'sonner';
 import type { Database } from '@/integrations/supabase/types';
+import FormDetails from '@/components/FormDetails';
 
 type Form = Database['public']['Views']['all_forms']['Row'] & { status: 'new' | 'read' | 'responded' | 'archived' };
 
@@ -20,7 +21,6 @@ const fetchForms = async (): Promise<Form[]> => {
   const { data, error } = await supabase.from('all_forms').select('*');
   if (error) throw error;
   
-  // Adicionando status mockado, já que não está no banco
   const formsWithStatus: Form[] = data.map(form => ({
     ...form,
     status: 'new' as const
@@ -158,7 +158,7 @@ const DashboardCustomerService = () => {
         </CardContent>
       </Card>
 
-      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}><DialogContent className="max-w-3xl"><DialogHeader><DialogTitle>{t('customerService.formDetails')}</DialogTitle></DialogHeader>{selectedForm && <div>{JSON.stringify(selectedForm, null, 2)}</div>}</DialogContent></Dialog>
+      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}><DialogContent className="max-w-3xl"><DialogHeader><DialogTitle>{t('customerService.formDetails')}</DialogTitle></DialogHeader><FormDetails form={selectedForm} /></DialogContent></Dialog>
       <Dialog open={isReplyOpen} onOpenChange={setIsReplyOpen}><DialogContent className="max-w-2xl"><DialogHeader><DialogTitle>{t('customerService.respondToForm')}</DialogTitle></DialogHeader><div className="space-y-4"><div><label>{t('customerService.emailSubject')}</label><Input value={replySubject} onChange={(e) => setReplySubject(e.target.value)} /></div><div><label>{t('customerService.emailMessage')}</label><Textarea value={replyMessage} onChange={(e) => setReplyMessage(e.target.value)} rows={8} /></div><div className="flex gap-2"><Button onClick={handleSendReply}>{t('customerService.sendReply')}</Button><Button variant="outline" onClick={() => setIsReplyOpen(false)}>{t('common.cancel')}</Button></div></div></DialogContent></Dialog>
     </div>
   );
