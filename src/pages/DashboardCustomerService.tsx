@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
-import { Search, Filter, Mail, Eye, Archive, MessageSquare } from '@/components/icons';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Search, Filter, Mail, Eye, Archive } from '@/components/icons';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -41,16 +41,10 @@ const DashboardCustomerService = () => {
   const updateStatusMutation = useMutation({
     mutationFn: async ({ id, form_type, status }: { id: string; form_type: string | null; status: FormStatus }) => {
       let tableName: 'contacts' | 'leads' | 'briefings';
-      if (form_type === 'contact') {
-        tableName = 'contacts';
-      } else if (form_type === 'lead') {
-        tableName = 'leads';
-      } else if (form_type === 'briefing') {
-        tableName = 'briefings';
-      } else {
-        throw new Error('Invalid form type');
-      }
-
+      if (form_type === 'contact') tableName = 'contacts';
+      else if (form_type === 'lead') tableName = 'leads';
+      else if (form_type === 'briefing') tableName = 'briefings';
+      else throw new Error('Invalid form type');
       const { error } = await supabase.from(tableName).update({ status }).eq('id', id);
       if (error) throw error;
     },
@@ -58,9 +52,7 @@ const DashboardCustomerService = () => {
       queryClient.invalidateQueries({ queryKey: ['forms'] });
       toast.success(t('customerService.statusUpdated'));
     },
-    onError: (error: Error) => {
-      toast.error(error.message);
-    }
+    onError: (error: Error) => toast.error(error.message)
   });
 
   const filteredForms = forms.filter(form => {
@@ -69,10 +61,8 @@ const DashboardCustomerService = () => {
       (form.name && form.name.toLowerCase().includes(searchLower)) ||
       (form.email && form.email.toLowerCase().includes(searchLower)) ||
       (form.company && form.company.toLowerCase().includes(searchLower));
-    
     const matchesStatus = statusFilter === 'all' || form.status === statusFilter;
     const matchesOrigin = originFilter === 'all' || form.form_type === originFilter;
-    
     return matchesSearch && matchesStatus && matchesOrigin;
   });
 
@@ -86,10 +76,7 @@ const DashboardCustomerService = () => {
 
   const getStatusBadge = (status: string | null) => {
     const variants: Record<string, 'default' | 'secondary' | 'destructive' | 'outline'> = {
-      new: 'destructive',
-      read: 'secondary',
-      responded: 'default',
-      archived: 'outline'
+      new: 'destructive', read: 'secondary', responded: 'default', archived: 'outline'
     };
     return <Badge variant={variants[status || 'new'] || 'default'}>{t(`common.${status || 'new'}`)}</Badge>;
   };
@@ -130,7 +117,7 @@ const DashboardCustomerService = () => {
         <p className="text-gray-600 mt-2">{t('customerService.subtitle')}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <Card><CardContent className="p-4"><div className="text-2xl font-bold">{stats.total}</div><p className="text-sm text-gray-600">{t('customerService.allForms')}</p></CardContent></Card>
         <Card><CardContent className="p-4"><div className="text-2xl font-bold text-red-600">{stats.new}</div><p className="text-sm text-gray-600">{t('common.new')}</p></CardContent></Card>
         <Card><CardContent className="p-4"><div className="text-2xl font-bold text-blue-600">{stats.read}</div><p className="text-sm text-gray-600">{t('common.read')}</p></CardContent></Card>
@@ -149,28 +136,56 @@ const DashboardCustomerService = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader><CardTitle>{t('customerService.allForms')} ({filteredForms.length})</CardTitle></CardHeader>
-        <CardContent>
-          {isLoading ? <p>Loading...</p> : (
-            <Table>
-              <TableHeader><TableRow><TableHead>{t('common.status')}</TableHead><TableHead>{t('common.origin')}</TableHead><TableHead>{t('common.name')}</TableHead><TableHead>{t('common.email')}</TableHead><TableHead>{t('common.date')}</TableHead><TableHead className="text-right">{t('common.actions', 'Actions')}</TableHead></TableRow></TableHeader>
-              <TableBody>
-                {filteredForms.map((form) => (
-                  <TableRow key={form.id} className="cursor-pointer hover:bg-gray-50" onClick={() => handleFormClick(form)}>
-                    <TableCell>{getStatusBadge(form.status)}</TableCell>
-                    <TableCell>{getOriginLabel(form.form_type)}</TableCell>
-                    <TableCell className="font-medium">{form.name}</TableCell>
-                    <TableCell>{form.email}</TableCell>
-                    <TableCell>{form.created_at ? new Date(form.created_at).toLocaleDateString() : 'N/A'}</TableCell>
-                    <TableCell className="text-right"><div className="flex gap-2 justify-end"><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleFormClick(form); }}><Eye className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleArchive(form); }}><Archive className="w-4 h-4" /></Button></div></TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          )}
-        </CardContent>
-      </Card>
+      {/* Tabela para Desktop */}
+      <div className="hidden md:block">
+        <Card>
+          <CardHeader><CardTitle>{t('customerService.allForms')} ({filteredForms.length})</CardTitle></CardHeader>
+          <CardContent>
+            {isLoading ? <p>Loading...</p> : (
+              <Table>
+                <TableHeader><TableRow><TableHead>{t('common.status')}</TableHead><TableHead>{t('common.origin')}</TableHead><TableHead>{t('common.name')}</TableHead><TableHead>{t('common.email')}</TableHead><TableHead>{t('common.date')}</TableHead><TableHead className="text-right">{t('common.actions', 'Actions')}</TableHead></TableRow></TableHeader>
+                <TableBody>
+                  {filteredForms.map((form) => (
+                    <TableRow key={form.id} className="cursor-pointer hover:bg-gray-50" onClick={() => handleFormClick(form)}>
+                      <TableCell>{getStatusBadge(form.status)}</TableCell>
+                      <TableCell>{getOriginLabel(form.form_type)}</TableCell>
+                      <TableCell className="font-medium">{form.name}</TableCell>
+                      <TableCell>{form.email}</TableCell>
+                      <TableCell>{form.created_at ? new Date(form.created_at).toLocaleDateString() : 'N/A'}</TableCell>
+                      <TableCell className="text-right"><div className="flex gap-2 justify-end"><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleFormClick(form); }}><Eye className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleArchive(form); }}><Archive className="w-4 h-4" /></Button></div></TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Lista de Cards para Mobile */}
+      <div className="md:hidden space-y-4">
+        {filteredForms.map((form) => (
+          <Card key={form.id} onClick={() => handleFormClick(form)}>
+            <CardHeader>
+              <div className="flex justify-between items-start">
+                <div>
+                  <CardTitle className="text-base">{form.name}</CardTitle>
+                  <p className="text-xs text-gray-500">{form.email}</p>
+                </div>
+                {getStatusBadge(form.status)}
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm"><strong>{t('common.origin')}:</strong> {getOriginLabel(form.form_type)}</p>
+              <p className="text-sm"><strong>{t('common.date')}:</strong> {form.created_at ? new Date(form.created_at).toLocaleDateString() : 'N/A'}</p>
+            </CardContent>
+            <CardFooter className="flex justify-end gap-2">
+              <Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4 mr-2" />{t('common.reply')}</Button>
+              <Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleArchive(form); }}><Archive className="w-4 h-4" /></Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
 
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}><DialogContent className="max-w-3xl"><DialogHeader><DialogTitle>{t('customerService.formDetails')}</DialogTitle></DialogHeader><FormDetails form={selectedForm} /></DialogContent></Dialog>
       <Dialog open={isReplyOpen} onOpenChange={setIsReplyOpen}><DialogContent className="max-w-2xl"><DialogHeader><DialogTitle>{t('customerService.respondToForm')}</DialogTitle></DialogHeader><div className="space-y-4"><div><label>{t('customerService.emailSubject')}</label><Input value={replySubject} onChange={(e) => setReplySubject(e.target.value)} /></div><div><label>{t('customerService.emailMessage')}</label><Textarea value={replyMessage} onChange={(e) => setReplyMessage(e.target.value)} rows={8} /></div><div className="flex gap-2"><Button onClick={handleSendReply}>{t('customerService.sendReply')}</Button><Button variant="outline" onClick={() => setIsReplyOpen(false)}>{t('common.cancel')}</Button></div></div></DialogContent></Dialog>
