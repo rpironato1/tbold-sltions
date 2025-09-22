@@ -119,7 +119,63 @@ export interface Database {
       }
     }
     Views: {
-      [_ in never]: never
+      all_forms: {
+        Row: {
+          budget: string | null
+          company: string | null
+          created_at: string | null
+          description: string | null
+          email: string | null
+          features: string | null
+          form_type: string | null
+          id: string | null
+          integrations: string | null
+          interest: string | null
+          message: string | null
+          name: string | null
+          phone: string | null
+          project_type: string | null
+          subject: string | null
+          timeline: string | null
+        }
+        Insert: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string | null
+          description?: string | null
+          email?: string | null
+          features?: string | null
+          form_type?: string | null
+          id?: string | null
+          integrations?: string | null
+          interest?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          project_type?: string | null
+          subject?: string | null
+          timeline?: string | null
+        }
+        Update: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string | null
+          description?: string | null
+          email?: string | null
+          features?: string | null
+          form_type?: string | null
+          id?: string | null
+          integrations?: string | null
+          interest?: string | null
+          message?: string | null
+          name?: string | null
+          phone?: string | null
+          project_type?: string | null
+          subject?: string | null
+          timeline?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never

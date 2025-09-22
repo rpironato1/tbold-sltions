@@ -16,6 +16,8 @@ import { toast } from 'sonner';
 const SignUp = () => {
   const navigate = useNavigate();
   const { t } = useTypedTranslation('pages');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [invitationCode, setInvitationCode] = useState('');
@@ -27,7 +29,6 @@ const SignUp = () => {
     setIsLoading(true);
     setError(null);
 
-    // Validação do código de convite obrigatório
     if (invitationCode !== '777777') {
       const errorMessage = t('signUp.errors.invalidCode');
       setError(errorMessage);
@@ -39,6 +40,12 @@ const SignUp = () => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        data: {
+          first_name: firstName,
+          last_name: lastName,
+        },
+      },
     });
 
     setIsLoading(false);
@@ -82,44 +89,27 @@ const SignUp = () => {
                     <AlertDescription>{error}</AlertDescription>
                   </Alert>
                 )}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">Nome</Label>
+                    <Input id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} required disabled={isLoading} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Sobrenome</Label>
+                    <Input id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} required disabled={isLoading} />
+                  </div>
+                </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">{t('signUp.fields.email')}</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder={t('signUp.placeholders.email')}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={isLoading}
-                    className="border-turnbold-border focus:border-turnbold-green"
-                  />
+                  <Input id="email" type="email" placeholder={t('signUp.placeholders.email')} value={email} onChange={(e) => setEmail(e.target.value)} required disabled={isLoading} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">{t('signUp.fields.password')}</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder={t('signUp.placeholders.password')}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    disabled={isLoading}
-                    className="border-turnbold-border focus:border-turnbold-green"
-                  />
+                  <Input id="password" type="password" placeholder={t('signUp.placeholders.password')} value={password} onChange={(e) => setPassword(e.target.value)} required disabled={isLoading} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="invitationCode">{t('signUp.fields.invitationCode')}</Label>
-                  <Input
-                    id="invitationCode"
-                    type="text"
-                    placeholder={t('signUp.placeholders.invitationCode')}
-                    value={invitationCode}
-                    onChange={(e) => setInvitationCode(e.target.value)}
-                    required
-                    disabled={isLoading}
-                    className="border-turnbold-border focus:border-turnbold-green"
-                  />
+                  <Input id="invitationCode" type="text" placeholder={t('signUp.placeholders.invitationCode')} value={invitationCode} onChange={(e) => setInvitationCode(e.target.value)} required disabled={isLoading} />
                 </div>
                 <Button type="submit" className="w-full btn-primary" disabled={isLoading}>
                   {isLoading ? (

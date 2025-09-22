@@ -14,38 +14,19 @@ import { Badge } from '@/components/ui/badge';
 import { toast } from 'sonner';
 import type { Database } from '@/integrations/supabase/types';
 
-// Type definitions
-type ContactRow = Database['public']['Tables']['contacts']['Row'];
-type LeadRow = Database['public']['Tables']['leads']['Row'];
-type BriefingRow = Database['public']['Tables']['briefings']['Row'];
+type Form = Database['public']['Views']['all_forms']['Row'] & { status: 'new' | 'read' | 'responded' | 'archived' };
 
-type FormStatus = 'new' | 'read' | 'responded' | 'archived';
+const fetchForms = async (): Promise<Form[]> => {
+  const { data, error } = await supabase.from('all_forms').select('*');
+  if (error) throw error;
+  
+  // Adicionando status mockado, já que não está no banco
+  const formsWithStatus: Form[] = data.map(form => ({
+    ...form,
+    status: 'new' as const
+  }));
 
-// Discriminated union for forms
-type ContactForm = ContactRow & { form_type: 'contact'; status: FormStatus; };
-type LeadForm = LeadRow & { form_type: 'lead'; status: FormStatus; };
-type BriefingForm = BriefingRow & { form_type: 'briefing'; status: FormStatus; };
-
-type Form = ContactForm | LeadForm | BriefingForm;
-
-
-const fetchForms = async () => {
-  const { data: contacts, error: contactsError } = await supabase.from('contacts').select('*');
-  if (contactsError) throw contactsError;
-
-  const { data: leads, error: leadsError } = await supabase.from('leads').select('*');
-  if (leadsError) throw leadsError;
-
-  const { data: briefings, error: briefingsError } = await supabase.from('briefings').select('*');
-  if (briefingsError) throw briefingsError;
-
-  const allForms: Form[] = [
-    ...contacts.map(c => ({ ...c, form_type: 'contact' as const, status: 'new' as const })),
-    ...leads.map(l => ({ ...l, form_type: 'lead' as const, status: 'new' as const })),
-    ...briefings.map(b => ({ ...b, form_type: 'briefing' as const, status: 'new' as const })),
-  ];
-
-  return allForms.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  return formsWithStatus.sort((a, b) => new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime());
 };
 
 const DashboardCustomerService = () => {
@@ -64,14 +45,9 @@ const DashboardCustomerService = () => {
 
   useEffect(() => {
     const channel = supabase
-      .channel('public:contacts')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'contacts' }, () => {
-        queryClient.invalidateQueries({ queryKey: ['forms'] });
-      })
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'leads' }, () => {
-        queryClient.invalidateQueries({ queryKey: ['forms'] });
-      })
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'briefings' }, () => {
+      .channel('public-all_forms')
+      .on('postgres_changes', { event: '*', schema: 'public' }, (payload) => {
+        console.log('Change received!', payload);
         queryClient.invalidateQueries({ queryKey: ['forms'] });
       })
       .subscribe();
@@ -84,9 +60,9 @@ const DashboardCustomerService = () => {
   const filteredForms = forms.filter(form => {
     const searchLower = searchTerm.toLowerCase();
     const matchesSearch = searchTerm === '' || 
-      form.name.toLowerCase().includes(searchLower) ||
-      form.email.toLowerCase().includes(searchLower) ||
-      ('company' in form && form.company && form.company.toLowerCase().includes(searchLower));
+      (form.name && form.name.toLowerCase().includes(searchLower)) ||
+      (form.email && form.email.toLowerCase().includes(searchLower)) ||
+      (form.company && form.company.toLowerCase().includes(searchLower));
     
     const matchesStatus = statusFilter === 'all' || form.status === statusFilter;
     const matchesOrigin = originFilter === 'all' || form.form_type === originFilter;
@@ -112,7 +88,7 @@ const DashboardCustomerService = () => {
     return <Badge variant={variants[status] || 'default'}>{t(`common.${status}`)}</Badge>;
   };
 
-  const getOriginLabel = (formType: string) => t(`customerService.formOrigins.${formType}`, formType);
+  const getOriginLabel = (formType: string | null) => t(`customerService.formOrigins.${formType || 'unknown'}`, formType || 'Unknown');
 
   const handleFormClick = (form: Form) => {
     setSelectedForm(form);
@@ -121,7 +97,7 @@ const DashboardCustomerService = () => {
 
   const handleReplyClick = (form: Form) => {
     setSelectedForm(form);
-    const subject = 'subject' in form ? form.subject : t('customerService.respondToForm');
+    const subject = form.subject || t('customerService.respondToForm');
     setReplySubject(`Re: ${subject}`);
     setReplyMessage(`${t('customerService.emailTemplate.greeting', { name: form.name })}\n\n${t('customerService.emailTemplate.thankYou')}\n\n\n\n${t('customerService.emailTemplate.signature')}`);
     setIsReplyOpen(true);
@@ -172,7 +148,7 @@ const DashboardCustomerService = () => {
                     <TableCell>{getOriginLabel(form.form_type)}</TableCell>
                     <TableCell className="font-medium">{form.name}</TableCell>
                     <TableCell>{form.email}</TableCell>
-                    <TableCell>{new Date(form.created_at).toLocaleDateString()}</TableCell>
+                    <TableCell>{form.created_at ? new Date(form.created_at).toLocaleDateString() : 'N/A'}</TableCell>
                     <TableCell className="text-right"><div className="flex gap-2 justify-end"><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleFormClick(form); }}><Eye className="w-4 h-4" /></Button><Button size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleReplyClick(form); }}><Mail className="w-4 h-4" /></Button><Button size="sm" variant="outline"><Archive className="w-4 h-4" /></Button></div></TableCell>
                   </TableRow>
                 ))}
