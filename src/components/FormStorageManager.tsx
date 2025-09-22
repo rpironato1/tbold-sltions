@@ -28,6 +28,11 @@ import {
   Mail,
   Briefcase
 } from '@/components/icons';
+import type { Database } from '@/integrations/supabase/types';
+
+type ContactInsert = Database['public']['Tables']['contacts']['Insert'];
+type LeadInsert = Database['public']['Tables']['leads']['Insert'];
+type BriefingInsert = Database['public']['Tables']['briefings']['Insert'];
 
 const FormStorageManager = () => {
   const [forms, setForms] = useState<FormData[]>([]);
@@ -59,25 +64,27 @@ const FormStorageManager = () => {
     for (const form of pendingForms) {
       try {
         const supabaseData = convertToSupabaseFormat(form);
-        let tableName = '';
-        
+        let error: any = null;
+
         switch (form.formType) {
           case 'lead':
-            tableName = 'leads';
+            ({ error } = await supabase
+              .from('leads')
+              .insert([supabaseData as LeadInsert]));
             break;
           case 'contact':
-            tableName = 'contacts';
+            ({ error } = await supabase
+              .from('contacts')
+              .insert([supabaseData as ContactInsert]));
             break;
           case 'briefing':
-            tableName = 'briefings';
+            ({ error } = await supabase
+              .from('briefings')
+              .insert([supabaseData as BriefingInsert]));
             break;
           case 'session':
             continue; // Skip session data
         }
-
-        const { error } = await supabase
-          .from(tableName)
-          .insert([supabaseData]);
 
         if (!error) {
           markFormAsSubmitted(form.id);
@@ -240,22 +247,22 @@ const FormStorageManager = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
                     {'name' in form && (
                       <div>
-                        <span className="font-medium">Name:</span> {form.name}
+                        <span className="font-medium">Name:</span> {form.name as string}
                       </div>
                     )}
                     {'email' in form && (
                       <div>
-                        <span className="font-medium">Email:</span> {form.email}
+                        <span className="font-medium">Email:</span> {form.email as string}
                       </div>
                     )}
                     {'phone' in form && (
                       <div>
-                        <span className="font-medium">Phone:</span> {form.phone}
+                        <span className="font-medium">Phone:</span> {form.phone as string}
                       </div>
                     )}
                     {'company' in form && (
                       <div>
-                        <span className="font-medium">Company:</span> {form.company}
+                        <span className="font-medium">Company:</span> {form.company as string}
                       </div>
                     )}
                   </div>

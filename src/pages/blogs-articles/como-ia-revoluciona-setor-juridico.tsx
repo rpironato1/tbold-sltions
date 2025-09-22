@@ -1,8 +1,7 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, Calendar, User } from '@/components/icons';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowLeft } from '@/components/icons';
 import { Link } from 'react-router-dom';
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import SEOHead from '@/components/SEOHead';
@@ -163,7 +162,7 @@ const Artigo1 = () => {
                         {t('articles.iaJuridico.sections.3.implementation.shortTerm.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.iaJuridico.sections.3.implementation.shortTerm.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.iaJuridico.sections.3.implementation.shortTerm.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -173,7 +172,7 @@ const Artigo1 = () => {
                         {t('articles.iaJuridico.sections.3.implementation.longTerm.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.iaJuridico.sections.3.implementation.longTerm.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.iaJuridico.sections.3.implementation.longTerm.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>

@@ -1,4 +1,3 @@
-
 import SEOHead from '@/components/SEOHead';
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import Header from '@/components/Header';
@@ -45,7 +44,7 @@ const AvisoLegal = () => {
                 </h2>
                 
                 <div className="space-y-8 text-turnbold-text leading-relaxed">
-                  {t('legalNotice.content.sections', { returnObjects: true }).map((section: { number: string; title: string; content?: string; additionalContent?: string; finalNote?: string }, index: number) => (
+                  {(t('legalNotice.content.sections', { returnObjects: true }) as Array<{ number: string; title: string; content?: string; additionalContent?: string; finalNote?: string }>).map((section, index: number) => (
                     <div key={index}>
                       <h3 className="text-xl font-bold text-turnbold-dark mb-4">
                         {section.number}. {section.title}

@@ -181,7 +181,7 @@ const DemoCustomerService = () => {
       return;
     }
 
-    addFormResponse(selectedForm.id, replySubject, replyMessage, selectedForm.email);
+    addFormResponse(selectedForm.id, replySubject, replyMessage, selectedForm.email as string);
     setIsReplyOpen(false);
     setReplySubject('');
     setReplyMessage('');
@@ -215,7 +215,7 @@ const DemoCustomerService = () => {
                 {t(`common.${key}`, key.charAt(0).toUpperCase() + key.slice(1))}
               </p>
               <p className="text-md text-gray-900 whitespace-pre-wrap">
-                {value || t('common.notProvided', 'Not provided')}
+                {typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean' ? String(value) : t('common.notProvided', 'Not provided')}
               </p>
             </div>
           ))}
@@ -404,10 +404,10 @@ const DemoCustomerService = () => {
                             className="font-medium"
                             onClick={() => handleFormClick(form)}
                           >
-                            {form.name}
+                            {form.name as string}
                           </TableCell>
                           <TableCell onClick={() => handleFormClick(form)}>
-                            {form.email}
+                            {form.email as string}
                           </TableCell>
                           <TableCell onClick={() => handleFormClick(form)}>
                             {new Date(form.timestamp).toLocaleDateString()}

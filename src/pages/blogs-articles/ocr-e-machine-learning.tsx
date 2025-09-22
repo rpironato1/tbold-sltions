@@ -129,7 +129,7 @@ const Artigo8 = () => {
                         {t('articles.ocrMachineLearning.sections.2.implementation.immediate.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.ocrMachineLearning.sections.2.implementation.immediate.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.ocrMachineLearning.sections.2.implementation.immediate.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -139,7 +139,7 @@ const Artigo8 = () => {
                         {t('articles.ocrMachineLearning.sections.2.implementation.expansion.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.ocrMachineLearning.sections.2.implementation.expansion.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.ocrMachineLearning.sections.2.implementation.expansion.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>

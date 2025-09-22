@@ -105,7 +105,7 @@ export function storeFormData<T extends Omit<FormData, 'id' | 'timestamp' | 'sub
       submittedToSupabase: false,
       status: 'new',
       responses: []
-    } as FormData;
+    } as unknown as FormData;
 
     currentForms.push(newFormData);
     localStorage.setItem(STORAGE_KEYS.FORMS, JSON.stringify(currentForms));
@@ -155,12 +155,12 @@ export function getUnsubmittedForms(): FormData[] {
 /**
  * Converts stored form data to Supabase format
  */
-export function convertToSupabaseFormat(formData: FormData): Record<string, unknown> {
+export function convertToSupabaseFormat(formData: Partial<FormData>): Record<string, unknown> {
   const { id, formType, timestamp, submittedToSupabase, ...supabaseData } = formData;
   
   // Convert projectType to project_type for briefings (Supabase naming convention)
   if (formType === 'briefing' && 'projectType' in supabaseData) {
-    const { projectType, ...rest } = supabaseData;
+    const { projectType, ...rest } = supabaseData as BriefingFormData;
     return { ...rest, project_type: projectType };
   }
   
@@ -312,9 +312,9 @@ export function getFilteredForms(
     // Search filter
     const searchLower = searchTerm.toLowerCase();
     const matchesSearch = searchTerm === '' || 
-      form.name?.toLowerCase().includes(searchLower) ||
-      form.email?.toLowerCase().includes(searchLower) ||
-      (form.company && form.company.toLowerCase().includes(searchLower));
+      (typeof form.name === 'string' && form.name.toLowerCase().includes(searchLower)) ||
+      (typeof form.email === 'string' && form.email.toLowerCase().includes(searchLower)) ||
+      (typeof form.company === 'string' && form.company.toLowerCase().includes(searchLower));
     
     // Status filter
     const matchesStatus = statusFilter === 'all' || form.status === statusFilter;

@@ -37,7 +37,7 @@ const TermosCondicoes = () => {
               <h2 className="text-3xl font-bold mb-6 text-turnbold-dark">{t('termsConditions.content.title')}</h2>
               
               <div className="space-y-6 text-turnbold-text leading-relaxed">
-                {t('termsConditions.content.sections', { returnObjects: true }).map((section: { number: string; title: string; content?: string; items?: { term: string; definition: string }[]; additionalContent?: string; finalNote?: string }, index: number) => (
+                {(t('termsConditions.content.sections', { returnObjects: true }) as Array<{ number: string; title: string; content?: string; items?: { term: string; definition: string }[]; additionalContent?: string; finalNote?: string }>).map((section, index: number) => (
                   <div key={index}>
                     <h3 className="text-xl font-semibold mb-3 text-turnbold-dark">
                       {section.number}. {section.title}

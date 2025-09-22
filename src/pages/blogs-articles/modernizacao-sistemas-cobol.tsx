@@ -147,7 +147,7 @@ const Artigo7 = () => {
                         {t('articles.modernizacaoCobol.sections.3.implementation.phase1.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.modernizacaoCobol.sections.3.implementation.phase1.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.modernizacaoCobol.sections.3.implementation.phase1.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -157,7 +157,7 @@ const Artigo7 = () => {
                         {t('articles.modernizacaoCobol.sections.3.implementation.phase2.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.modernizacaoCobol.sections.3.implementation.phase2.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.modernizacaoCobol.sections.3.implementation.phase2.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -167,7 +167,7 @@ const Artigo7 = () => {
                         {t('articles.modernizacaoCobol.sections.3.implementation.phase3.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.modernizacaoCobol.sections.3.implementation.phase3.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.modernizacaoCobol.sections.3.implementation.phase3.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>

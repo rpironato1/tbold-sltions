@@ -38,10 +38,10 @@ export function useFormStorage<T extends Omit<FormData, 'id' | 'timestamp' | 'su
     const fullFormData = {
       formType: options.formType,
       ...formData
-    } as T;
+    } as unknown as T;
 
     // Validate form data
-    if (!validateFormData(fullFormData)) {
+    if (!validateFormData(fullFormData as any)) {
       if (options.onValidationError) {
         options.onValidationError(fullFormData);
       }
@@ -52,7 +52,7 @@ export function useFormStorage<T extends Omit<FormData, 'id' | 'timestamp' | 'su
     // Store in localStorage first
     let formId: string;
     try {
-      formId = storeFormData(fullFormData);
+      formId = storeFormData(fullFormData as any);
       console.log(`${options.formType} data stored in localStorage with ID:`, formId);
     } catch (error) {
       console.error(`Error storing ${options.formType} data locally:`, error);
@@ -64,7 +64,7 @@ export function useFormStorage<T extends Omit<FormData, 'id' | 'timestamp' | 'su
     }
 
     // Convert to Supabase format and submit
-    const supabaseData = convertToSupabaseFormat(fullFormData);
+    const supabaseData = convertToSupabaseFormat(fullFormData as any);
     const { data, error } = await options.supabaseClient
       .from(options.supabaseTable)
       .insert([supabaseData]);

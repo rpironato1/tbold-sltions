@@ -161,7 +161,7 @@ const Artigo9 = () => {
                         {t('articles.tecnologiaPersonal.sections.3.implementation.immediate.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.tecnologiaPersonal.sections.3.implementation.immediate.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.tecnologiaPersonal.sections.3.implementation.immediate.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -171,7 +171,7 @@ const Artigo9 = () => {
                         {t('articles.tecnologiaPersonal.sections.3.implementation.advanced.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.tecnologiaPersonal.sections.3.implementation.advanced.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.tecnologiaPersonal.sections.3.implementation.advanced.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>

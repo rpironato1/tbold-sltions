@@ -64,7 +64,7 @@ const Artigo6 = () => {
                   {t('articles.lgpdProtecao.sections.0.subsections.0.title')}
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6 mb-6">
-                  {t('articles.lgpdProtecao.sections.0.subsections.0.items', { returnObjects: true }).map((item: {title: string, description: string}, index: number) => (
+                  {(t('articles.lgpdProtecao.sections.0.subsections.0.items', { returnObjects: true }) as Array<{title: string, description: string}>).map((item, index: number) => (
                     <div key={index} className="border-l-4 border-turnbold-green pl-4">
                       <h4 className="font-semibold mb-2">{item.title}</h4>
                       <p className="text-sm">{item.description}</p>
@@ -105,7 +105,7 @@ const Artigo6 = () => {
                         {t('articles.lgpdProtecao.sections.2.implementation.immediate.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.lgpdProtecao.sections.2.implementation.immediate.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.lgpdProtecao.sections.2.implementation.immediate.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
@@ -115,7 +115,7 @@ const Artigo6 = () => {
                         {t('articles.lgpdProtecao.sections.2.implementation.mediumTerm.title')}
                       </h4>
                       <ul className="text-sm space-y-1">
-                        {t('articles.lgpdProtecao.sections.2.implementation.mediumTerm.items', { returnObjects: true }).map((item: string, index: number) => (
+                        {(t('articles.lgpdProtecao.sections.2.implementation.mediumTerm.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>

@@ -1,8 +1,7 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, Calendar, User } from '@/components/icons';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowLeft } from '@/components/icons';
 import { Link } from 'react-router-dom';
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import SEOHead from '@/components/SEOHead';

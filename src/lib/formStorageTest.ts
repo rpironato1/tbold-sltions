@@ -154,7 +154,7 @@ export function displayStorageContents() {
     if ('phone' in form) console.log(`   Phone: ${form.phone}`);
     if ('company' in form) console.log(`   Company: ${form.company}`);
     if ('subject' in form) console.log(`   Subject: ${form.subject}`);
-    if ('message' in form) console.log(`   Message: ${form.message.substring(0, 50)}...`);
+    if ('message' in form && typeof form.message === 'string') console.log(`   Message: ${form.message.substring(0, 50)}...`);
   });
 
   console.log(`\n📊 Summary: ${forms.length} forms stored`);
@@ -175,5 +175,5 @@ export const formStorageTest = {
 
 // Make available globally for easy testing
 if (typeof window !== 'undefined') {
-  (window as Record<string, unknown>).formStorageTest = formStorageTest;
+  (window as any).formStorageTest = formStorageTest;
 }

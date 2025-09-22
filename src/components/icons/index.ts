@@ -5,10 +5,12 @@
 
 export {
   Archive,
+  AlertCircle,
   ArrowLeft,
   ArrowRight,
   BarChart3,
   Bell,
+  Briefcase,
   Building2,
   Calendar,
   Check,
@@ -61,6 +63,7 @@ export {
   Target,
   TrendingUp,
   Trophy,
+  Trash2,
   Truck,
   User,
   UserPlus,

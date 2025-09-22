@@ -27,6 +27,9 @@ import {
 import { useTypedTranslation } from '@/hooks/useTranslation';
 import SEOHead from '@/components/SEOHead';
 import { storeFormData, markFormAsSubmitted, validateFormData, convertToSupabaseFormat } from '@/lib/formStorage';
+import type { Database } from '@/integrations/supabase/types';
+
+type BriefingInsert = Database['public']['Tables']['briefings']['Insert'];
 
 const OnDemand = () => {
   const { t } = useTypedTranslation('projects');
@@ -80,7 +83,7 @@ const OnDemand = () => {
     const supabaseData = convertToSupabaseFormat(briefingData);
     const { error } = await supabase
       .from('briefings')
-      .insert([supabaseData]);
+      .insert([supabaseData as BriefingInsert]);
 
     setIsSubmitting(false);
 
