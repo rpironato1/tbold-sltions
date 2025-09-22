@@ -1,0 +1,1060 @@
+{
+  "index": {
+    "meta": {
+      "title": "TurnBold Solutions - Asistentes Virtuales IA y Automatización Empresarial",
+      "description": "Transforma tu negocio con asistentes virtuales inteligentes, automatización de procesos y soluciones personalizadas de IA. Más de 110 clientes atendidos con 97,3% de satisfacción.",
+      "keywords": "asistente virtual, inteligencia artificial, automatización, IA generativa, soluciones empresariales, TurnBold, análisis jurídico, fitness, barbería, belleza"
+    },
+    "hero": {
+      "slides": [
+        {
+          "title": "Todo negocio necesita un Asistente Virtual.",
+          "subtitle": "Ofrecemos servicios a empresas de todo el mundo.",
+          "cta": "Empezar Ahora",
+          "secondaryCta": "Hablar con Especialista",
+          "highlight": "IA Generativa"
+        },
+        {
+          "title": "Soluciones de IA en la Nube Personalizadas",
+          "subtitle": "Ya seas pequeña o grandes empresas. Soluciones Diversas.",
+          "cta": "Empezar Ahora",
+          "secondaryCta": "Ver Casos",
+          "highlight": "Migración Segura"
+        },
+        {
+          "title": "De la Cocina al Aula Soluciones Personalizadas",
+          "subtitle": "Optimiza tu negocio y enfócate en lo fundamental.",
+          "cta": "Empezar Ahora",
+          "secondaryCta": "Comenzar Ahora",
+          "highlight": "Soporte 24/7"
+        }
+      ]
+    },
+    "stats": {
+      "title": "Resultados Comprobados",
+      "subtitle": "Números que hablan por sí solos",
+      "items": [
+        { "number": "320+", "label": "Proyectos" },
+        { "number": "110+", "label": "Clientes" },
+        { "number": "60+", "label": "Optimizados" },
+        { "number": "97,3%", "label": "Satisfacción" }
+      ]
+    },
+    "services": {
+      "title": "Nuestros Servicios de IA",
+      "subtitle": "Soluciones que Transforman",
+      "description": "Especializados en tecnologías de vanguardia que hacen una diferencia real para tu negocio",
+      "items": [
+        {
+          "title": "Análisis Inteligente",
+          "description": "Capacidad de análisis crítico y profundo.",
+          "highlight": "Procesamiento fundamentado",
+          "features": [
+            "Procesamiento de lenguaje natural",
+            "Integración con sistemas existentes",
+            "Aprendizaje continuo",
+            "Análisis de sentimientos"
+          ]
+        },
+        {
+          "title": "Investigador y Optimizador",
+          "description": "Aumenta la visibilidad de tu marca.",
+          "highlight": "ROI promedio del 400% en 6 meses",
+          "features": [
+            "Análisis predictivo avanzado",
+            "Automatización inteligente",
+            "OCR y procesamiento de documentos",
+            "Reconocimiento de patrones"
+          ]
+        },
+        {
+          "title": "Extractor y Revisor",
+          "description": "Asegura contenido completo para análisis y aprendizaje.",
+          "highlight": "Cero pérdida de datos garantizada",
+          "features": [
+            "Migración a la nube",
+            "Modernización de interfaces",
+            "Integración de APIs modernas",
+            "Mantenimiento especializado"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Algunos de nuestros proyectos",
+      "subtitle": "Soluciones Listas para Usar",
+      "description": "Sistemas completos desarrollados por TurnBold para diferentes sectores del mercado",
+      "items": [
+        {
+          "name": "AnaliseJUR",
+          "description": "Sistema de análisis jurídico con OCR e IA Exclusiva con capacidad de análisis crítico",
+          "sector": "Jurídico",
+          "features": ["OCR Inteligente", "IA Analítica", "Automatización de Procesos"],
+          "savings": "Ahorra el 80% del tiempo"
+        },
+        {
+          "name": "FitCoach",
+          "description": "Plataforma completa para entrenadores personales con gestión de estudiantes y pagos",
+          "sector": "Fitness",
+          "features": ["Gestión de Estudiantes", "Pagos", "Entrenamientos Personalizados"],
+          "savings": "Triplica tus ingresos"
+        },
+        {
+          "name": "BarberNow",
+          "description": "Gestión inteligente para barberías con citas en línea y control de cola",
+          "sector": "Belleza",
+          "features": ["Citas En Línea", "Control de Cola", "Gestión de Inventario"],
+          "savings": "Reduce el 60% de la espera"
+        },
+        {
+          "name": "LovelyNails",
+          "description": "Sistema especializado para manicuras y pedicuras con galería y citas",
+          "sector": "Belleza",
+          "features": ["Galería de Diseños", "Citas", "Control de Materiales"],
+          "savings": "Duplica tus citas"
+        }
+      ],
+      "viewDetails": "Ver Detalles"
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "subtitle": "Historias de Éxito",
+      "description": "Resultados reales de empresas que transformaron sus negocios con nosotros",
+      "items": [
+        {
+          "name": "Bruno Hernandez Castro",
+          "role": "Gerente de Ventas",
+          "company": "Mendes & Associates",
+          "comment": "Estábamos teniendo dificultades para administrar nuestras tareas diarias y encontrar tiempo para actividades que requerían más dedicación. Entonces, conocimos TurnBold y estoy extremadamente satisfecho, ¡es simplemente INCREÍBLE!!!",
+          "result": "100% más eficiencia"
+        },
+        {
+          "name": "Renan Soares da Silva",
+          "role": "Gerente de Operaciones",
+          "company": "RF Fitness Studio",
+          "comment": "Usamos TurnBold para gestionar nuestras clases y estoy extremadamente satisfecho con los resultados. Generar planes de comidas y entrenamientos personalizados son una parte integral de nuestra rutina. ¡Se lo recomiendo a todos los que buscan transformar las clases en experiencias memorables!",
+          "result": "300% más estudiantes"
+        },
+        {
+          "name": "Juliana Gomes Ferreira",
+          "role": "Directora Comercial",
+          "company": "Juli Nails Studio",
+          "comment": "Nos preocupamos por cada cliente, adoptamos un enfoque personalizado, y nuestro equipo de gestión está siempre disponible por teléfono o correo electrónico. El compromiso con nuestros clientes es nuestra prioridad.",
+          "result": "200% más citas"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Consultoría Personalizada",
+      "subtitle": "Transforma Tu Idea en",
+      "subtitleHighlight": "Realidad",
+      "description": "Contáctanos y descubre cómo nuestras soluciones pueden revolucionar tu negocio. Nuestro equipo de especialistas está listo para ayudarte a lograr resultados extraordinarios.",
+      "features": [
+        "Consultoría especializada",
+        "Propuesta personalizada para tu negocio",
+        "Retorno garantizado",
+        "Soporte completo post-implementación"
+      ],
+      "form": {
+        "title": "Contáctanos",
+        "description": "Completa el formulario y nuestro equipo se pondrá en contacto rápidamente para programar tu consulta.",
+        "fields": {
+          "name": "Tu nombre completo *",
+          "email": "Tu mejor correo electrónico *",
+          "phone": "Tu teléfono con código de área *",
+          "message": "Cuéntanos sobre tu proyecto o necesidad. Cuantos más detalles, mejor podremos ayudarte..."
+        },
+        "button": "Solicitar Consulta",
+        "required": "* Campos obligatorios. Tus datos están protegidos por LGPD.",
+        "success": "¡Gracias! Nuestro equipo se pondrá en contacto contigo pronto.",
+        "error": "Error al enviar tus datos:"
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Acerca de TurnBold - Expertos en IA y Modernización de Sistemas",
+      "description": "Conoce TurnBold Solutions: empresa de tecnología especializada en soluciones personalizadas, inteligencia artificial y modernización de sistemas legados con más de 5 años de experiencia.",
+      "keywords": "acerca TurnBold, empresa tecnología, IA, machine learning, COBOL, modernización, innovación, equipo especializado"
+    },
+    "hero": {
+      "title": "Acerca de TurnBold",
+      "description": "Somos una empresa de tecnología especializada en soluciones personalizadas, inteligencia artificial y modernización de sistemas legados."
+    },
+    "mission": {
+      "title": "Misión",
+      "description": "Identificar nuevas métricas y realizar análisis detallado de cada negocio para ofrecer soluciones personalizadas."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Ser una referencia en optimización de negocios a través de IA y Machine Learning, impulsando el éxito de nuestros clientes."
+    },
+    "values": {
+      "title": "Valores",
+      "description": "Atención personalizada, eficiencia, innovación y asociación con nuestros clientes."
+    },
+    "history": {
+      "title": "Nuestra Historia",
+      "description": "Conoce el camino de crecimiento e innovación de TurnBold",
+      "timeline": [
+        { "year": "2020", "title": "Fundación", "description": "TurnBold se crea con enfoque en soluciones COBOL" },
+        { "year": "2021", "title": "Expansión", "description": "Adición de servicios de IA y Machine Learning" },
+        { "year": "2022", "title": "Innovación", "description": "Lanzamiento de los primeros productos propios" },
+        { "year": "2023", "title": "Crecimiento", "description": "Más de 100 clientes atendidos" },
+        { "year": "2024", "title": "Presente", "description": "Líder en soluciones tecnológicas innovadoras" }
+      ]
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "description": "Conoce a los profesionales que hacen excepcional a TurnBold",
+      "members": [
+        {
+          "name": "Rodolfo Pironato",
+          "role": "C.E.O",
+          "bio": "La dificultad del mercado para ofrecer soluciones simples, rápidas y prácticas es evidente. TurnBold nació con el propósito de innovar e incluir la IA en nuestras rutinas diarias. Con un equipo altamente calificado, estamos listos para transformar la complejidad en simplicidad, haciendo que nuestras tareas sean más eficientes y productivas."
+        },
+        {
+          "name": "Ricardo Moreira",
+          "role": "Gerente de Marketing",
+          "bio": "Como Gerente de Marketing en TurnBold, mi misión es conectar nuestras soluciones innovadoras con las necesidades reales del mercado. Trabajo diariamente para posicionar a la empresa como una referencia en transformación digital, desarrollando estrategias que destaquen nuestro diferencial en IA y modernización de sistemas legados."
+        },
+        {
+          "name": "Fernanda Alves",
+          "role": "Directora",
+          "bio": "En TurnBold, lidero nuestra visión estratégica de crecimiento sostenible e innovación continua. Mi enfoque es garantizar que mantengamos nuestra excelencia operacional mientras expandimos nuestro portafolio de soluciones. Creo que el éxito de la empresa está directamente vinculado al éxito de nuestros clientes."
+        },
+        {
+          "name": "Ana Costa",
+          "role": "Jefa de UX/UI",
+          "bio": "Como Jefa de UX/UI en TurnBold, soy responsable de crear experiencias digitales que transforman la complejidad en simplicidad. Mi trabajo implica asegurar que todas nuestras soluciones sean intuitivas y centradas en el usuario, aplicando los mejores principios de diseño para maximizar la eficiencia y satisfacción de nuestros clientes."
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        { "number": "110+", "label": "Clientes Atendidos" },
+        { "number": "4", "label": "Productos Propios" },
+        { "number": "320+", "label": "Proyectos Entregados" },
+        { "number": "5", "label": "Años de Experiencia" }
+      ]
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contacto TurnBold - Consultoría Gratuita en Soluciones de IA",
+      "description": "Contáctanos para una consultoría personalizada gratuita. Nuestro equipo responde dentro de 2 horas hábiles. Transforma tu idea en realidad.",
+      "keywords": "contacto TurnBold, consultoría gratuita, soporte IA, atención personalizada, cotización, WhatsApp, teléfono"
+    },
+    "hero": {
+      "title": "Contáctanos",
+      "description": "Estamos listos para transformar tus ideas en soluciones tecnológicas innovadoras. Contáctanos y descubre cómo podemos ayudar a que tu negocio crezca."
+    },
+    "form": {
+      "title": "Envía Tu Mensaje",
+      "description": "Completa el formulario a continuación y nuestro equipo se pondrá en contacto dentro de 2 horas hábiles.",
+      "fields": {
+        "name": "Nombre Completo *",
+        "email": "Correo Electrónico *",
+        "phone": "Teléfono *",
+        "company": "Empresa",
+        "subject": "Asunto *",
+        "interest": "Principal Interés",
+        "message": "Mensaje *"
+      },
+      "placeholders": {
+        "name": "Tu nombre completo",
+        "email": "tu@correo.com",
+        "phone": "(11) 99999-9999",
+        "company": "Nombre de tu empresa",
+        "subject": "¿De qué te gustaría hablar?",
+        "message": "Cuéntanos más sobre tu proyecto, necesidades o preguntas..."
+      },
+      "interests": [
+        { "value": "analisejur", "label": "AnaliseJUR" },
+        { "value": "fitcoach", "label": "FitCoach" },
+        { "value": "barbernow", "label": "BarberNow" },
+        { "value": "lovelynails", "label": "LovelyNails" },
+        { "value": "custom", "label": "Solución Personalizada" },
+        { "value": "cobol", "label": "Desarrollo COBOL" },
+        { "value": "ia", "label": "Asistentes Virtuales IA" },
+        { "value": "consultoria", "label": "Consultoría" },
+        { "value": "outro", "label": "Otro" }
+      ],
+      "privacy": "Política de Privacidad: Tus datos están seguros con nosotros. Utilizamos tu información solo para contactarte sobre tu solicitud, en cumplimiento con LGPD.",
+      "button": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "selectOption": "Selecciona una opción"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "email": {
+        "title": "Correo Electrónico",
+        "info": "contact@turnboldwt.com"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "info": "1 201282777"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "info": "Haz clic aquí y habla con nosotros por WhatsApp"
+      },
+      "hours": {
+        "title": "Horario Comercial",
+        "info": "Atención general y nuevos clientes:\nLunes a viernes 9 AM a 6 PM\nServicio de Soporte:\nCorreo electrónico, teléfono y central WhatsApp: 7 AM a 11 PM\nServicio de Emergencia:\nServicio proporcionado a través de tu gerente comercial"
+      },
+      "businessHours": {
+        "title": "Horario Comercial",
+        "schedule": "Lunes a Viernes: 8 AM a 6 PM",
+        "emergency": "*Soporte de emergencia 24/7 disponible para clientes empresariales"
+      }
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ TurnBold - Preguntas Frecuentes sobre Asistentes Virtuales IA",
+      "description": "Encuentra respuestas a las principales preguntas sobre nuestros asistentes virtuales, entrenamiento de IA, informes de rendimiento y políticas de servicio.",
+      "keywords": "FAQ, preguntas frecuentes, asistentes virtuales, entrenamiento IA, soporte, reembolso, pequeñas empresas, paquetes personalizados"
+    },
+    "hero": {
+      "title": "Preguntas Frecuentes",
+      "description": "Encuentra respuestas rápidas a las preguntas más comunes sobre nuestros productos y servicios. Si no encuentras lo que buscas, contáctanos.",
+      "searchPlaceholder": "Buscar en preguntas..."
+    },
+    "categories": {
+      "general": "General"
+    },
+    "questions": [
+      {
+        "question": "¿Cómo entrenan a sus Asistentes Virtuales?",
+        "answer": "Nuestro proceso de entrenamiento se basa en múltiples criterios, incluyendo experiencia, análisis del sector empresarial y datos comerciales del cliente. Aseguramos que el aprendizaje de la IA se haga con rigor y precisión."
+      },
+      {
+        "question": "¿Cómo podemos seguir el progreso?",
+        "answer": "Proporcionamos actualizaciones regulares e informes detallados sobre las actividades realizadas. Además, ofrecemos herramientas de seguimiento para monitorear tareas en tiempo real."
+      },
+      {
+        "question": "¿Ofrecen informes de rendimiento?",
+        "answer": "Sí, proporcionamos informes periódicos con métricas de rendimiento, productividad y progreso de las actividades delegadas."
+      },
+      {
+        "question": "¿Con quién debo contactar en caso de quejas?",
+        "answer": "Nuestro equipo de soporte al cliente está disponible para resolver cualquier problema. Puedes contactarnos por correo electrónico, teléfono o a través de tu gerente comercial."
+      },
+      {
+        "question": "¿Cuál es la política de reembolso?",
+        "answer": "Nuestra política de reembolso es simple y directa. Para más detalles, consulta los Términos y Condiciones disponibles en nuestro sitio web."
+      },
+      {
+        "question": "¿Tienen un equipo de soporte dedicado?",
+        "answer": "Sí, tenemos un equipo especializado para brindar soporte y garantizar la mejor experiencia para nuestros clientes."
+      },
+      {
+        "question": "Tengo un negocio pequeño. ¿Necesito un Asistente Virtual?",
+        "answer": "Los pequeños negocios pueden beneficiarse significativamente de los Asistentes Virtuales, ya que ayudan a optimizar el tiempo, gestionar tareas administrativas y mejorar la productividad."
+      },
+      {
+        "question": "¿Ofrecen paquetes personalizados?",
+        "answer": "Sí, ofrecemos paquetes personalizados para satisfacer las necesidades específicas de tu negocio. Contáctanos para discutir una solución ideal para ti."
+      },
+      {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos pagos con tarjeta de crédito y PIX. Para más información sobre opciones de pago, contacta a nuestro equipo de soporte."
+      }
+    ],
+    "search": {
+      "results": "resultado(s) encontrado(s) para",
+      "noResults": "No se Encontraron Preguntas",
+      "noResultsDescription": "No pudimos encontrar preguntas relacionadas con tu búsqueda. Prueba otros términos o contáctanos.",
+      "clearSearch": "Limpiar Búsqueda"
+    },
+    "cta": {
+      "title": "¿No Encontraste Tu Respuesta?",
+      "description": "Nuestro equipo de expertos está listo para ayudarte. Contáctanos a través de nuestros canales de soporte.",
+      "phone": {
+        "title": "Teléfono",
+        "number": "+55 (11) 5028-2777",
+        "hours": "Lun-Vie: 8am a 6pm"
+      },
+      "email": {
+        "title": "Correo Electrónico",
+        "address": "suporte@turnboldwt.com",
+        "response": "Respuesta en 24hrs"
+      }
+    }
+  },
+  "login": {
+    "meta": {
+      "title": "Login TurnBold - Acceso al Panel de Control y Dashboard",
+      "description": "Accede a tu dashboard TurnBold de forma segura. Gestiona tus proyectos, asistentes virtuales y supervisa informes de rendimiento en tiempo real.",
+      "keywords": "login TurnBold, dashboard, panel control, acceso seguro, gestión proyectos, informes"
+    },
+    "title": "Iniciar Sesión",
+    "description": "Ingresa tus credenciales para acceder al panel.",
+    "fields": {
+      "email": "Correo Electrónico",
+      "password": "Contraseña"
+    },
+    "placeholders": {
+      "email": "tu@correo.com",
+      "password": "Tu contraseña"
+    },
+    "remember": "Recordarme",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "button": "Iniciar Sesión",
+    "signing": "Iniciando sesión...",
+    "noAccount": "¿No tienes una cuenta?",
+    "signup": "Regístrate",
+    "errors": {
+      "title": "Error de Autenticación"
+    }
+  },
+  "signUp": {
+    "meta": {
+      "title": "Registro TurnBold - Crear Cuenta de Administrador",
+      "description": "Crea tu cuenta de administrador TurnBold para acceder al dashboard completo. Gestiona proyectos, asistentes virtuales y supervisa informes de rendimiento.",
+      "keywords": "registro TurnBold, crear cuenta, registro administrador, dashboard, acceso completo"
+    },
+    "title": "Crear Cuenta",
+    "description": "Completa los datos para crear tu acceso de administrador.",
+    "fields": {
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "invitationCode": "Código de Invitación"
+    },
+    "placeholders": {
+      "email": "tu@email.com",
+      "password": "Crea una contraseña fuerte",
+      "invitationCode": "Ingresa el código"
+    },
+    "button": "Crear Cuenta",
+    "registering": "Registrando...",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "signin": "Iniciar sesión",
+    "errors": {
+      "title": "Error de Registro",
+      "invalidCode": "Código de invitación inválido."
+    },
+    "success": {
+      "title": "¡Éxito!",
+      "message": "¡Registro exitoso! Revisa tu correo para la confirmación."
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog TurnBold - Artículos sobre IA, COBOL, Tecnología e Innovación",
+      "description": "Perspectivas y tendencias sobre inteligencia artificial, modernización COBOL, tecnología jurídica y soluciones empresariales. Contenido especializado por expertos TurnBold.",
+      "keywords": "blog TurnBold, artículos IA, COBOL, tecnología jurídica, machine learning, OCR, entrenadores personales, barberías, LGPD"
+    },
+    "hero": {
+      "title": "Blog TurnBold",
+      "description": "Perspectivas, tendencias y conocimiento sobre tecnología, IA, desarrollo e innovación. Mantente actualizado con nuestros expertos."
+    },
+    "search": {
+      "placeholder": "Buscar artículos...",
+      "results": "artículo(s) encontrado(s)"
+    },
+    "categories": ["Todos", "IA", "COBOL", "Tecnología", "Negocios", "Jurídico"],
+    "posts": [
+      {
+        "id": 1,
+        "slug": "como-ia-revoluciona-sector-juridico",
+        "title": "Cómo la IA está Revolucionando el Sector Jurídico",
+        "excerpt": "Descubre las principales tendencias de inteligencia artificial aplicadas al derecho y cómo pueden transformar los bufetes de abogados.",
+        "author": "Maria Santos",
+        "date": "2024-01-15",
+        "category": "IA",
+        "image": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=500&h=300&fit=crop",
+        "readTime": "8 min"
+      },
+      {
+        "id": 2,
+        "slug": "modernizacion-sistemas-cobol",
+        "title": "Modernización de Sistemas COBOL: Guía Completa",
+        "excerpt": "Estrategias efectivas para modernizar sistemas legados sin comprometer las operaciones. Casos prácticos y mejores prácticas.",
+        "author": "João Silva",
+        "date": "2024-01-10",
+        "category": "COBOL",
+        "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=500&h=300&fit=crop",
+        "readTime": "12 min"
+      },
+      {
+        "id": 3,
+        "slug": "tecnologia-para-entrenadores-personales",
+        "title": "Entrenadores Personales: Cómo la Tecnología Puede Potenciar Tus Resultados",
+        "excerpt": "Plataformas digitales, aplicaciones de entrenamiento y herramientas de gestión que están transformando el mundo fitness.",
+        "author": "Carlos Oliveira",
+        "date": "2024-01-08",
+        "category": "Negocios",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
+        "readTime": "6 min"
+      },
+      {
+        "id": 4,
+        "slug": "ocr-y-machine-learning",
+        "title": "OCR y Machine Learning: Extrayendo Valor de los Documentos",
+        "excerpt": "Cómo las tecnologías de reconocimiento óptico combinadas con IA pueden automatizar procesos documentales.",
+        "author": "Ana Costa",
+        "date": "2024-01-05",
+        "category": "Tecnología",
+        "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&h=300&fit=crop",
+        "readTime": "10 min"
+      },
+      {
+        "id": 5,
+        "slug": "gestion-digital-para-barberias",
+        "title": "Gestión Digital para Barberías: Tendencias 2024",
+        "excerpt": "Las principales innovaciones tecnológicas que están modernizando salones y barberías en todo el mundo.",
+        "author": "João Silva",
+        "date": "2024-01-03",
+        "category": "Negocios",
+        "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&h=300&fit=crop",
+        "readTime": "7 min"
+      },
+      {
+        "id": 6,
+        "slug": "lgpd-y-proteccion-de-datos",
+        "title": "LGPD y Protección de Datos en Sistemas Jurídicos",
+        "excerpt": "Implementando cumplimiento con la Ley General de Protección de Datos en software jurídico.",
+        "author": "Maria Santos",
+        "date": "2024-01-01",
+        "category": "Jurídico",
+        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500&h=300&fit=crop",
+        "readTime": "9 min"
+      }
+    ],
+    "noResults": {
+      "title": "No se encontraron artículos para los filtros seleccionados.",
+      "button": "Limpiar Filtros"
+    },
+    "newsletter": {
+      "title": "Recibe Nuestras Actualizaciones",
+      "description": "Suscríbete para recibir nuestros últimos artículos directamente en tu correo electrónico.",
+      "placeholder": "Tu mejor correo electrónico",
+      "button": "Suscribirse"
+    }
+  },
+  "subscriptions": {
+    "meta": {
+      "title": "Planes TurnBold - Suscripciones AnaliseJUR, FitCoach, BarberNow y LovelyNails",
+      "description": "Elige el plan ideal: productos especializados desde U$ 999,90/mes o infraestructura de centro de datos dedicada. GPU para IA y CPU optimizada para tu negocio.",
+      "keywords": "planes TurnBold, suscripción mensual, AnaliseJUR, FitCoach, BarberNow, LovelyNails, centro datos, GPU, CPU, precios"
+    },
+    "hero": {
+      "title": "Planes y Suscripciones",
+      "description": "Elige el plan ideal para tu negocio. Ofrecemos soluciones completas desde productos especializados hasta infraestructura de centro de datos con CPU y GPU dedicados."
+    },
+    "products": {
+      "title": "Productos Especializados",
+      "description": "Suscripciones mensuales para nuestros principales productos",
+      "items": [
+        { "name": "AnaliseJUR", "price": "U$ 1.299,90", "description": "Sistema completo para análisis jurídico" },
+        { "name": "FitCoach", "price": "U$ 1.199,90", "description": "Plataforma de coaching fitness personalizado" },
+        { "name": "BarberNow", "price": "U$ 999,90", "description": "Sistema de citas para barberías" },
+        { "name": "LovelyNails", "price": "U$ 999,90", "description": "Gestión completa para salones de belleza" }
+      ],
+      "subscription": "Suscripción mensual",
+      "button": "CONTRATAR"
+    },
+    "datacenterCPU": {
+      "title": "Planes de Centro de Datos CPU",
+      "description": "Infraestructura dedicada con procesamiento optimizado",
+      "items": [
+        { "name": "Centro de Datos CPU Pequeño", "specs": "4vCPU, 16GB RAM, 500GB SSD", "price": "U$ 899,90" },
+        { "name": "Centro de Datos CPU Mediano", "specs": "8vCPU, 32GB RAM, 1TB SSD", "price": "U$ 999,90" },
+        { "name": "Centro de Datos CPU Alto", "specs": "16vCPU, 64GB RAM, 2TB SSD", "price": "U$ 1.299,90" }
+      ]
+    },
+    "datacenterGPU": {
+      "title": "Planes GPU",
+      "description": "Procesamiento gráfico avanzado para IA y Machine Learning",
+      "items": [
+        { "name": "GPU Pequeña", "specs": "4GB VRAM", "price": "U$ 999,90" },
+        { "name": "GPU Mediana", "specs": "8GB VRAM", "price": "U$ 1.099,90" },
+        { "name": "GPU Alta", "specs": "16GB VRAM", "price": "U$ 1.699,90" },
+        { "name": "GPU MAX", "specs": "32GB VRAM", "price": "U$ 2.999,90" }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "description": "Contáctanos y elige el plan ideal para tu negocio",
+      "button": "CONTÁCTANOS"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Proyectos TurnBold - AnaliseJUR, FitCoach, BarberNow y LovelyNails",
+      "description": "Descubre nuestros productos propios: sistema jurídico con OCR e IA, plataforma fitness, gestión para barberías y soluciones para salones de belleza. Soluciones completas para diferentes sectores.",
+      "keywords": "proyectos TurnBold, AnaliseJUR, FitCoach, BarberNow, LovelyNails, OCR, IA jurídica, fitness, barbería, manicura"
+    },
+    "hero": {
+      "title": "Nuestros Proyectos",
+      "description": "Descubre nuestras soluciones propias que están transformando diferentes sectores. Cada producto fue desarrollado con enfoque en la experiencia del usuario y resultados reales."
+    },
+    "items": [
+      {
+        "id": "analisejur",
+        "name": "AnaliseJUR",
+        "subtitle": "Sistema de Análisis Jurídico con IA",
+        "description": "Plataforma completa para abogados que automatiza el análisis de documentos legales usando OCR e IA generativa.",
+        "features": [
+          "Carga segura de PDFs y documentos",
+          "OCR + extracción de datos estructurados",
+          "Panel de visualización lado a lado",
+          "Generación automática de minutas jurídicas",
+          "Informes exportables e historial de versiones",
+          "Sistema de permisos para equipo"
+        ],
+        "benefits": [
+          "80% de reducción en tiempo de análisis procesal",
+          "Mayor precisión en extracción de datos",
+          "Estandarización de minutas jurídicas",
+          "Control completo de versiones de documentos"
+        ],
+        "sector": "Jurídico"
+      },
+      {
+        "id": "fitcoach",
+        "name": "FitCoach",
+        "subtitle": "Plataforma Completa para Entrenadores Personales",
+        "description": "Sistema completo de gestión que permite a entrenadores personales gestionar estudiantes, entrenamientos, dietas y pagos.",
+        "features": [
+          "Calendario inteligente de sesiones",
+          "Creador de dietas y entrenamientos personalizados",
+          "Área exclusiva del estudiante con progreso",
+          "Sistema de facturación recurrente",
+          "Notificaciones automáticas vía WhatsApp",
+          "Informes detallados de rendimiento"
+        ],
+        "benefits": [
+          "Aumento de la retención de estudiantes",
+          "Automatización de facturación",
+          "Mejor seguimiento del progreso",
+          "Comunicación eficiente con estudiantes"
+        ],
+        "sector": "Fitness"
+      },
+      {
+        "id": "barbernow",
+        "name": "BarberNow",
+        "subtitle": "Gestión Inteligente para Barberías",
+        "description": "Solución completa para barberías modernas con citas online, control de cola y gestión financiera.",
+        "features": [
+          "Citas online con bloqueo en tiempo real",
+          "Sistema de cola por código QR",
+          "Gestión de equipo y comisiones",
+          "Control automatizado de inventario",
+          "Campañas de marketing integradas",
+          "Dashboard financiero completo"
+        ],
+        "benefits": [
+          "Reducción del tiempo de espera",
+          "Aumento de la satisfacción del cliente",
+          "Optimización de la agenda",
+          "Control financiero preciso"
+        ],
+        "sector": "Belleza"
+      },
+      {
+        "id": "lovelynails",
+        "name": "LovelyNails",
+        "subtitle": "Sistema para Manicuras y Pedicuras",
+        "description": "Plataforma especializada para profesionales de nail art con citas compartidas y galería de diseños.",
+        "features": [
+          "Citas online compartibles",
+          "Galería de diseños personalizada",
+          "Sistema de paquetes y fidelidad",
+          "Control de esterilización de materiales",
+          "Recordatorios automáticos de mantenimiento",
+          "Gestión financiera simplificada"
+        ],
+        "benefits": [
+          "Mejor organización de citas",
+          "Fidelización de clientes",
+          "Control sanitario riguroso",
+          "Aumento de ingresos recurrentes"
+        ],
+        "sector": "Belleza"
+      }
+    ],
+    "viewDetails": "Ver Detalles",
+    "requestDemo": "Solicitar Demo",
+    "keyFeatures": "Características Clave",
+    "additionalFeatures": "características adicionales",
+    "benefits": "Beneficios",
+    "customSolution": {
+      "title": "¿Necesitas una Solución Personalizada?",
+      "description": "Desarrollamos soluciones a medida para satisfacer las necesidades específicas de tu negocio. Contáctanos y creemos algo increíble juntos.",
+      "requestQuote": "Solicitar Cotización",
+      "customProjects": "Proyectos Personalizados"
+    }
+  },
+  "privacyPolicy": {
+    "meta": {
+      "title": "Política de Privacidad - TurnBold Solutions",
+      "description": "Conoce cómo TurnBold recopila, usa y protege tu información personal. Nuestra política de privacidad detalla nuestro compromiso con la seguridad de tus datos.",
+      "keywords": "política de privacidad, protección de datos, LGPD, seguridad de datos, TurnBold"
+    },
+    "header": {
+      "title": "Política de Privacidad",
+      "subtitle": "Conoce cómo TurnBold recopila, usa y protege tu información personal."
+    },
+    "content": {
+      "title": "Términos y Condiciones de TurnBold",
+      "subtitle": "POLÍTICA DE PRIVACIDAD",
+      "sections": [
+        {
+          "number": "1",
+          "title": "Introducción",
+          "content": "TurnBold valora la privacidad y seguridad de los datos de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos la información personal proporcionada por los usuarios al utilizar nuestros servicios de CRM e Inteligencia Artificial (IA)."
+        },
+        {
+          "number": "2",
+          "title": "Recopilación de Información",
+          "content": "2.1. TurnBold puede recopilar los siguientes tipos de información:",
+          "items": [
+            "Datos de registro: Nombre, correo electrónico, teléfono e información de pago;",
+            "Datos de uso: Información sobre el uso del sistema e interacciones con nuestras plataformas;",
+            "Información técnica: Dirección IP, tipo de navegador y configuraciones del dispositivo."
+          ],
+          "additionalContent": "2.2. Los datos se recopilan cuando el usuario:",
+          "additionalItems": [
+            "Se registra en la plataforma;",
+            "Utiliza los servicios de TurnBold;",
+            "Contacta al equipo de soporte."
+          ]
+        },
+        {
+          "number": "3",
+          "title": "Uso de la Información",
+          "content": "3.1. La información recopilada se utiliza para:",
+          "items": [
+            "Proporcionar y mejorar los servicios de TurnBold;",
+            "Procesar pagos y gestionar suscripciones;",
+            "Personalizar la experiencia del usuario;",
+            "Enviar comunicaciones relevantes, como notificaciones sobre actualizaciones y promociones;",
+            "Garantizar la seguridad y prevenir fraudes."
+          ]
+        },
+        {
+          "number": "4",
+          "title": "Compartir Información",
+          "content": "4.1. TurnBold no vende, alquila o comparte datos personales con terceros, excepto:",
+          "items": [
+            "Con proveedores de servicios esenciales (procesamiento de pagos, hosting);",
+            "Cuando sea requerido por ley u orden judicial;",
+            "Para proteger derechos, propiedad o seguridad de la empresa y usuarios;",
+            "Con consentimiento expreso del usuario."
+          ],
+          "additionalContent": "4.2. Todos los socios y proveedores de servicios están obligados a mantener la confidencialidad y seguridad de los datos."
+        },
+        {
+          "number": "5",
+          "title": "Protección de Datos",
+          "content": "5.1. TurnBold implementa medidas técnicas y organizativas para proteger los datos personales:",
+          "items": [
+            "Cifrado de datos en tránsito y en reposo;",
+            "Controles estrictos de acceso;",
+            "Monitoreo continuo de seguridad;",
+            "Copias de seguridad regulares y seguras;",
+            "Capacitación del equipo en seguridad de la información."
+          ],
+          "additionalContent": "5.2. En caso de un incidente de seguridad, los usuarios afectados serán notificados según lo requiera la legislación aplicable."
+        },
+        {
+          "number": "6",
+          "title": "Retención de Datos",
+          "content": "6.1. Los datos personales se mantienen durante el tiempo necesario para cumplir los propósitos descritos en esta política o según lo requiera la ley.",
+          "additionalContent": "6.2. Los usuarios pueden solicitar la eliminación de sus datos a través de una solicitud formal, respetando cualquier obligación legal."
+        },
+        {
+          "number": "7",
+          "title": "Derechos de los Usuarios",
+          "content": "7.1. Los usuarios tienen derecho a:",
+          "items": [
+            "Acceder, corregir o eliminar sus datos personales;",
+            "Solicitar información sobre el procesamiento de sus datos;",
+            "Revocar el consentimiento para el uso de datos, cuando sea aplicable."
+          ],
+          "additionalContent": "7.2. Para ejercer estos derechos, los usuarios deben contactar a TurnBold a través de los canales de soporte disponibles en el sitio web."
+        },
+        {
+          "number": "8",
+          "title": "Cambios en esta Política",
+          "content": "8.1. TurnBold se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Los cambios serán comunicados a los usuarios a través del sitio web o correo electrónico registrado."
+        },
+        {
+          "number": "9",
+          "title": "Cookies y Tecnologías Similares",
+          "content": "9.1. TurnBold utiliza cookies y tecnologías similares para:",
+          "items": [
+            "Mejorar la experiencia de navegación del usuario;",
+            "Personalizar contenido y anuncios;",
+            "Analizar el tráfico y uso de la plataforma;",
+            "Mantener preferencias y configuraciones del usuario;",
+            "Garantizar la seguridad y funcionalidad de los servicios."
+          ],
+          "subtitle": "9.2. Tipos de cookies utilizadas:",
+          "cookieTypes": [
+            {
+              "type": "Cookies esenciales:",
+              "description": "Necesarias para el funcionamiento básico de la plataforma;"
+            },
+            {
+              "type": "Cookies de rendimiento:",
+              "description": "Recopilan información sobre cómo los usuarios utilizan el sitio;"
+            },
+            {
+              "type": "Cookies de funcionalidad:",
+              "description": "Permiten que el sitio recuerde las elecciones del usuario;"
+            },
+            {
+              "type": "Cookies de marketing:",
+              "description": "Utilizadas para personalizar anuncios y contenido."
+            }
+          ],
+          "additionalContent": "9.3. Los usuarios pueden gestionar sus preferencias de cookies a través de la configuración del navegador o el banner de consentimiento mostrado en el sitio.",
+          "finalNote": "9.4. La desactivación de cookies puede afectar el funcionamiento de algunas características de la plataforma."
+        },
+        {
+          "number": "10",
+          "title": "Contacto",
+          "content": "10.1. Si tienes preguntas sobre esta política, contáctanos a través de los canales de soporte disponibles en nuestro sitio web."
+        }
+      ],
+      "agreement": {
+        "text": "Al utilizar los servicios de TurnBold, declaras haber leído y estar de acuerdo con esta Política de Privacidad."
+      }
+    }
+  },
+  "refundPolicy": {
+    "meta": {
+      "title": "Política de Reembolso - TurnBold Solutions",
+      "description": "Conoce las directrices para solicitudes de reembolso relacionadas con nuestros servicios de CRM e Inteligencia Artificial.",
+      "keywords": "política de reembolso, reembolso, TurnBold, CRM, inteligencia artificial, cancelación, suscripción"
+    },
+    "header": {
+      "title": "Política de Reembolso",
+      "subtitle": "Conoce las directrices para solicitudes de reembolso relacionadas con nuestros servicios de CRM e Inteligencia Artificial."
+    },
+    "content": {
+      "title": "Política de Reembolso TurnBold",
+      "subtitle": "",
+      "sections": [
+        {
+          "number": "1",
+          "title": "Introducción",
+          "content": "TurnBold valora la transparencia y la satisfacción del cliente. Esta Política de Reembolso establece directrices para solicitudes de reembolso relacionadas con nuestros servicios de CRM e Inteligencia Artificial (IA). Al utilizar nuestros servicios, aceptas los términos descritos a continuación."
+        },
+        {
+          "number": "2",
+          "title": "Condiciones para Reembolso",
+          "content": "2.1. Los reembolsos se otorgarán solo en casos específicos, como se describe en esta política.",
+          "additionalContent": "2.2. Los usuarios pueden solicitar reembolsos para planes de suscripción dentro de 7 (siete) días desde la fecha de la primera compra, de acuerdo con el Código de Protección al Consumidor.",
+          "finalNote": "2.3. Para servicios personalizados o desarrollo de software bajo contrato, no se otorgarán reembolsos después de la firma del contrato e inicio del desarrollo."
+        },
+        {
+          "number": "3",
+          "title": "Procedimiento de Solicitud",
+          "content": "3.1. El usuario debe enviar la solicitud de reembolso por escrito a través del correo electrónico de soporte proporcionado en el sitio web de TurnBold.",
+          "subtitle": "3.2. La solicitud debe incluir:",
+          "items": [
+            "Nombre completo del usuario o empresa;",
+            "Fecha de compra;",
+            "Razón detallada de la solicitud de reembolso."
+          ],
+          "additionalContent": "3.3. TurnBold analizará la solicitud dentro de 5 (cinco) días hábiles y notificará al usuario sobre la decisión."
+        },
+        {
+          "number": "4",
+          "title": "Devolución de Pagos",
+          "content": "4.1. Si se aprueba el reembolso, el monto será devuelto al mismo método de pago utilizado en la compra.",
+          "additionalContent": "4.2. El tiempo de procesamiento del reembolso puede variar según la institución financiera, y puede tomar hasta 10 (diez) días hábiles.",
+          "finalNote": "4.3. Las tarifas administrativas y costos de transacción pueden ser deducidos del monto del reembolso, dependiendo del método de pago."
+        },
+        {
+          "number": "5",
+          "title": "Cancelación de Suscripción",
+          "content": "5.1. El usuario puede cancelar su suscripción en cualquier momento, sin penalizaciones futuras.",
+          "additionalContent": "5.2. La cancelación detiene la renovación automática de la suscripción, pero el acceso al servicio permanecerá disponible hasta el final del período ya pagado.",
+          "finalNote": "5.3. No se otorgan reembolsos para períodos de suscripción ya utilizados."
+        },
+        {
+          "number": "6",
+          "title": "Excepciones",
+          "content": "6.1. No se otorgarán reembolsos en los siguientes casos:",
+          "items": [
+            "Uso inadecuado o negligencia del usuario con respecto al servicio;",
+            "Solicitudes realizadas después del plazo de 7 días para reembolsos de suscripción;",
+            "Servicios personalizados o servicios bajo contrato."
+          ]
+        },
+        {
+          "number": "7",
+          "title": "Cambios en esta Política",
+          "content": "7.1. TurnBold se reserva el derecho de cambiar esta Política de Reembolso en cualquier momento. El usuario será notificado sobre cambios relevantes por correo electrónico o a través de nuestro sitio web."
+        }
+      ],
+      "agreement": {
+        "text": "Si tienes preguntas, contacta a nuestro equipo de soporte. Al utilizar nuestros servicios, declaras haber leído y estar de acuerdo con esta Política de Reembolso."
+      }
+    }
+  }
+,
+  "termsConditions": {
+    "meta": {
+      "title": "Términos y Condiciones - TurnBold Solutions",
+      "description": "Conoce los términos y condiciones de uso de nuestros servicios de CRM e Inteligencia Artificial.",
+      "keywords": "términos y condiciones, términos de uso, TurnBold, CRM, inteligencia artificial, contratos, políticas"
+    },
+    "header": {
+      "title": "Términos y Condiciones",
+      "subtitle": "Conoce los términos y condiciones de uso de nuestros servicios de CRM e Inteligencia Artificial."
+    },
+    "content": {
+      "title": "Términos y Condiciones TurnBold",
+      "sections": [
+        {
+          "number": "1",
+          "title": "Introducción",
+          "content": "¡Bienvenido a TurnBold! Estos Términos y Condiciones rigen el uso de nuestros servicios de Sistemas CRM e Inteligencia Artificial (IA) dirigidos a pequeñas y medianas empresas. Al utilizar nuestros servicios, aceptas los términos descritos a continuación. Si no estás de acuerdo, no utilices nuestros servicios."
+        },
+        {
+          "number": "2",
+          "title": "Definiciones",
+          "items": [
+            { "term": "TurnBold", "definition": "Empresa proveedora de servicios de software, incluyendo sistemas CRM y soluciones de IA." },
+            { "term": "Usuario", "definition": "Persona física o jurídica que adquiere y utiliza los servicios de TurnBold." },
+            { "term": "Servicios", "definition": "Acceso mensual al software y desarrollo de soluciones personalizadas." }
+          ]
+        },
+        {
+          "number": "3",
+          "title": "Uso de los Servicios",
+          "content": "3.1. Los usuarios pueden acceder al software a través de suscripción mensual o contratar el desarrollo de soluciones personalizadas mediante propuesta comercial.",
+          "additionalContent": "3.2. Está prohibido el uso del software para actividades ilegales, fraudulentas o que infrinjan derechos de terceros.",
+          "finalNote": "3.3. El acceso a los sistemas es personal e intransferible, estando prohibido compartir credenciales."
+        },
+        {
+          "number": "4",
+          "title": "Planes y Pagos",
+          "content": "4.1. La utilización de los servicios está condicionada al pago de las tasas según los planes vigentes.",
+          "additionalContent": "4.2. Los pagos se realizan de forma recurrente y pueden cancelarse en cualquier momento, según las políticas de cancelación.",
+          "finalNote": "4.3. TurnBold se reserva el derecho de ajustar precios con aviso previo de 30 días."
+        },
+        {
+          "number": "5",
+          "title": "Desarrollo de Software Personalizado",
+          "content": "5.1. El desarrollo de soluciones personalizadas estará sujeto a la firma de un contrato específico.",
+          "additionalContent": "5.2. La propiedad intelectual de los sistemas desarrollados podrá negociarse según el contrato firmado entre las partes."
+        },
+        {
+          "number": "6",
+          "title": "Soporte y Mantenimiento",
+          "content": "6.1. El soporte será proporcionado en horario comercial, a través de los canales informados en el sitio web de TurnBold.",
+          "additionalContent": "6.2. El mantenimiento correctivo se realizará sin costo adicional para problemas internos del software proporcionado por TurnBold.",
+          "finalNote": "6.3. Las mejoras y actualizaciones podrán estar disponibles según el cronograma de la empresa."
+        },
+        {
+          "number": "7",
+          "title": "Propiedad Intelectual",
+          "content": "7.1. Todo el software proporcionado por TurnBold está protegido por derechos de autor y de propiedad intelectual.",
+          "additionalContent": "7.2. El uso del software se concede por licencia y no transfiere ningún derecho de propiedad al usuario."
+        },
+        {
+          "number": "8",
+          "title": "Limitación de Responsabilidad",
+          "content": "8.1. TurnBold no se responsabiliza por daños indirectos, pérdida de beneficios o perjuicios derivados del uso inadecuado de los sistemas.",
+          "additionalContent": "8.2. El uso de los servicios es de entera responsabilidad del usuario."
+        },
+        {
+          "number": "9",
+          "title": "Cancelación y Rescisión",
+          "content": "9.1. El usuario puede cancelar la suscripción en cualquier momento, observando las políticas de reembolso.",
+          "additionalContent": "9.2. TurnBold podrá terminar el acceso a los servicios en caso de incumplimiento o violación de los términos de uso."
+        },
+        {
+          "number": "10",
+          "title": "Disposiciones Generales",
+          "content": "10.1. Estos Términos podrán actualizarse periódicamente, siendo el usuario notificado sobre cambios relevantes.",
+          "additionalContent": "10.2. Cualquier disputa se resolverá de acuerdo con las leyes del país donde TurnBold está registrada."
+        }
+      ],
+      "agreement": {
+        "text": "Al utilizar nuestros servicios, declaras haber leído y estar de acuerdo con estos Términos y Condiciones."
+      }
+    }
+  },
+  "notFound": {
+    "meta": {
+      "title": "Página No Encontrada - Error 404 | TurnBold Solutions",
+      "description": "La página que buscas no fue encontrada. Regresa a la página principal de TurnBold Solutions y explora nuestros servicios de IA y automatización empresarial.",
+      "keywords": "error 404, página no encontrada, TurnBold, página principal, servicios IA"
+    },
+    "title": "404",
+    "message": "¡Oops! Página no encontrada",
+    "description": "La página que estás buscando no existe o ha sido movida.",
+    "button": "Volver al Inicio"
+  },
+  "legalNotice": {
+    "meta": {
+      "title": "Aviso Legal - TurnBold Solutions",
+      "description": "Información importante sobre el uso de nuestros servicios y sitio web de TurnBold Solutions.",
+      "keywords": "aviso legal, términos de uso, limitación de responsabilidad, propiedad intelectual, TurnBold"
+    },
+    "header": {
+      "title": "Aviso Legal",
+      "subtitle": "Información importante sobre el uso de nuestros servicios y sitio web."
+    },
+    "content": {
+      "title": "Aviso Legal TurnBold",
+      "sections": [
+        {
+          "number": "1",
+          "title": "Información General",
+          "content": "Este sitio web y los servicios de TurnBold se proporcionan \"tal como están\", sin garantías de ningún tipo, expresas o implícitas. TurnBold se esfuerza por asegurar que la información proporcionada sea precisa y actualizada, pero no garantiza la exactitud, completitud o idoneidad de dicha información para cualquier propósito específico."
+        },
+        {
+          "number": "2",
+          "title": "Uso de la Información",
+          "content": "2.1. Todo el contenido disponible en el sitio web de TurnBold es meramente informativo y no constituye asesoramiento profesional o técnico.",
+          "additionalContent": "2.2. El uso de la información o servicios proporcionados es enteramente responsabilidad del usuario.",
+          "finalNote": "2.3. TurnBold no se hace responsable de las decisiones tomadas basándose en el contenido del sitio web o por el uso de sus servicios sin el análisis profesional adecuado."
+        },
+        {
+          "number": "3",
+          "title": "Limitación de Responsabilidad",
+          "content": "3.1. TurnBold no se hace responsable de ningún daño directo, indirecto, incidental o consecuencial resultante del uso o incapacidad de usar sus servicios.",
+          "additionalContent": "3.2. El usuario es responsable de verificar que los servicios de TurnBold satisfagan sus necesidades antes de contratar.",
+          "finalNote": "3.3. Bajo ninguna circunstancia la responsabilidad de TurnBold excederá el monto pagado por el usuario por los servicios contratados."
+        },
+        {
+          "number": "4",
+          "title": "Enlaces de Terceros",
+          "content": "4.1. El sitio web de TurnBold puede contener enlaces a sitios de terceros. TurnBold no se hace responsable del contenido, políticas de privacidad o prácticas de estos sitios externos.",
+          "finalNote": "4.2. El uso de enlaces a sitios de terceros ocurre bajo el riesgo del usuario."
+        },
+        {
+          "number": "5",
+          "title": "Propiedad Intelectual",
+          "content": "5.1. Todo el contenido, incluyendo textos, imágenes, logotipos, software y otros materiales, es propiedad de TurnBold o de sus licenciantes, estando protegido por las leyes de derechos de autor y propiedad intelectual.",
+          "finalNote": "5.2. El uso indebido del contenido puede resultar en sanciones legales, incluyendo demandas judiciales y penalizaciones aplicables."
+        },
+        {
+          "number": "6",
+          "title": "Cambios en el Aviso Legal",
+          "content": "6.1. TurnBold se reserva el derecho de modificar este Aviso Legal en cualquier momento. Los cambios serán publicados en el sitio web y entrarán en vigor inmediatamente.",
+          "finalNote": "6.2. El uso continuado de los servicios después de los cambios implica la aceptación de los nuevos términos."
+        },
+        {
+          "number": "7",
+          "title": "Contacto",
+          "content": "7.1. Para aclarar dudas sobre este Aviso Legal, ponte en contacto con nuestro equipo de soporte a través de los canales disponibles en el sitio web de TurnBold."
+        }
+      ],
+      "agreement": {
+        "text": "Al utilizar el sitio web y los servicios de TurnBold, aceptas los términos de este Aviso Legal."
+      }
+    }
+  }
+}

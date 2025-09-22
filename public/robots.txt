@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://turnbold.com.br/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Block admin areas
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /_/
+Disallow: /api/
+
+# Allow important files
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.webp
+Allow: /*.pdf

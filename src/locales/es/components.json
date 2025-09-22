@@ -1,0 +1,47 @@
+{
+  "footer": {
+    "description": "TurnBold es un proveedor con sede en EE.UU. de servicios de IA, CRM Virtual y COBOL, con el objetivo de ayudar a los propietarios de pequeñas empresas a llevar sus negocios al siguiente nivel.",
+    "siteMap": "Mapa del Sitio",
+    "navigation": {
+      "home": "Inicio",
+      "about": "Acerca de Nosotros",
+      "projects": "Proyectos",
+      "subscriptions": "Suscripciones",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contacto"
+    },
+    "policies": "Nuestras Políticas",
+    "legal": {
+      "termsConditions": "Términos y Condiciones",
+      "privacyPolicy": "Política de Privacidad",
+      "refundPolicy": "Política de Reembolso",
+      "legalNotice": "Aviso Legal"
+    },
+    "addresses": "Nuestras Direcciones",
+    "usa": {
+      "country": "EE.UU.",
+      "ein": "EIN 37-2157287",
+      "company": "TurnBold, LLC",
+      "address1": "131 Continental Dr, Suite 305",
+      "address2": "Newark - DW, Código postal 19713",
+      "phone": "Tel: 866-767-5850",
+      "email": "contact@turnboldwt.com"
+    },
+    "copyright": "TurnBold WT © 2025. Todos los Derechos Reservados."
+  },
+  "lgpdBanner": {
+    "message": "Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra",
+    "privacyPolicy": "Política de Privacidad",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
+  },
+  "languageSelector": {
+    "label": "Idioma",
+    "languages": {
+      "pt-BR": "Português (BR)",
+      "en": "English",
+      "es": "Español"
+    }
+  }
+}

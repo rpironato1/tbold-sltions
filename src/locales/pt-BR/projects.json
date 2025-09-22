@@ -1,0 +1,479 @@
+{
+  "navigation": {
+    "backToProjects": "Voltar aos Projetos"
+  },
+  "common": {
+    "viewDemo": "Ver Demo",
+    "requestDemo": "Solicitar Demo",
+    "requestTrial": "Solicitar Teste Grátis",
+    "startFreeTrial": "Iniciar Teste Grátis",
+    "talkToSpecialist": "Falar com Especialista",
+    "scheduleDemo": "Agendar Demo",
+    "freeTrial": "30 dias grátis",
+    "gdprCompliant": "Conforme LGPD",
+    "support247": "Suporte 24/7",
+    "secureData": "Dados Seguros",
+    "dedicatedSupport": "Suporte Dedicado",
+    "setup24h": "Setup em 24h"
+  },
+  "tabs": {
+    "features": "Funcionalidades",
+    "benefits": "Benefícios",
+    "architecture": "Arquitetura",
+    "techStack": "Tecnologias",
+    "testimonials": "Depoimentos",
+    "faq": "FAQ"
+  },
+  "analisejur": {
+    "meta": {
+      "title": "AnaliseJUR - IA para Análise de Documentos Jurídicos",
+      "description": "Sistema inteligente de análise de documentos jurídicos com IA, OCR e machine learning para escritórios de advocacia",
+      "keywords": "IA jurídico, análise documentos, OCR, machine learning, advocacia"
+    },
+    "badge": "Jurídico • IA",
+    "title": "AnaliseJUR",
+    "subtitle": "Plataforma inteligente de análise de documentos judiciais completa que transforma processos PDF em dados estruturados e acionáveis, combinando OCR avançado com múltiplos provedores de IA para automação jurídica.",
+    "cta": {
+      "title": "Pronto para Transformar Seu Escritório?",
+      "description": "Comece hoje com nosso teste gratuito de 30 dias. Sem compromisso, sem cartão de crédito necessário."
+    },
+    "hero": {
+      "title": "Funcionalidades Principais",
+      "description": "Plataforma completa que executa ciclo de ingestão, processamento, análise e visualização de dados jurídicos com pipeline robusto de backend e interface web moderna."
+    },
+    "features": [
+      {
+        "title": "Extração Profunda de PDF",
+        "description": "Usa biblioteca docling para extrair texto completo, imagens, tabelas e metadados de documentos judiciais com precisão."
+      },
+      {
+        "title": "Organização Automática",
+        "description": "Identifica automaticamente números de processo e cria estrutura de pastas padronizada para armazenamento organizado."
+      },
+      {
+        "title": "Múltiplos Provedores de IA",
+        "description": "Integração com Google Gemini, OpenAI ChatGPT e Anthropic Claude para análise jurídica especializada."
+      },
+      {
+        "title": "Interface de Chat Inteligente",
+        "description": "Interação em linguagem natural para perguntas, resumos, análise e comparação de documentos específicos."
+      },
+      {
+        "title": "Aceleração por GPU",
+        "description": "Detecta automaticamente GPU NVIDIA com CUDA para acelerar processamento, com fallback para CPU."
+      },
+      {
+        "title": "Configuração Flexível",
+        "description": "Interface web para configurar chaves de API e escolher modelos de IA conforme necessidades do usuário."
+      }
+    ],
+    "benefits": {
+      "title": "Resultados Comprovados",
+      "description": "Sistema que transforma documentos judiciais em dados estruturados e acionáveis, otimizando fluxos de trabalho jurídicos com tecnologia avançada.",
+      "metrics": [
+        { "metric": "90%", "description": "Redução no tempo de análise de documentos" },
+        { "metric": "99%", "description": "Precisão na extração de dados estruturados" },
+        { "metric": "75%", "description": "Economia nos custos operacionais" },
+        { "metric": "100%", "description": "Automação do fluxo de trabalho jurídico" }
+      ],
+      "workflow": {
+        "title": "Fluxo de Trabalho Automatizado",
+        "steps": [
+          {
+            "title": "Ingestão",
+            "description": "Upload de PDFs na pasta docs_analisar para processamento automático"
+          },
+          {
+            "title": "Processamento",
+            "description": "Extração de dados, identificação de processos e organização estruturada"
+          },
+          {
+            "title": "Análise",
+            "description": "Interface de chat com IA para consultas inteligentes e comparações"
+          }
+        ]
+      }
+    },
+    "testimonials": {
+      "title": "O Que Nossos Clientes Dizem",
+      "description": "Veja como o AnaliseJUR está transformando escritórios de advocacia em todo o país.",
+      "items": [
+        {
+          "name": "Dr. Carlos Mendes",
+          "role": "Sócio do Escritório Mendes & Associados",
+          "comment": "O AnaliseJUR revolucionou nossa prática. Conseguimos analisar o dobro de casos no mesmo tempo."
+        },
+        {
+          "name": "Dr. Ana Paula Silva",
+          "role": "Advogada Trabalhista",
+          "comment": "A geração automática de minutas me economiza horas de trabalho. Qualidade excepcional!"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "description": "Tire suas dúvidas sobre o AnaliseJUR.",
+      "items": [
+        {
+          "question": "Como funciona o processamento de documentos?",
+          "answer": "O sistema usa a biblioteca docling para extrair conteúdo de PDFs, identifica automaticamente números de processo e organiza dados em estruturas padronizadas com JSONs, Markdowns e imagens."
+        },
+        {
+          "question": "Quais provedores de IA são suportados?",
+          "answer": "O AnaliseJUR integra com Google Gemini, OpenAI ChatGPT e Anthropic Claude, permitindo escolher o modelo mais adequado para cada tipo de análise jurídica."
+        },
+        {
+          "question": "É necessário GPU para usar o sistema?",
+          "answer": "Não é obrigatório. O sistema detecta automaticamente GPUs NVIDIA com CUDA para acelerar processamento, mas funciona perfeitamente com CPU quando GPU não está disponível."
+        },
+        {
+          "question": "Como funciona a comparação de documentos?",
+          "answer": "Através da interface de chat, você pode solicitar comparações específicas entre documentos do mesmo processo. O sistema filtra conteúdo relevante e gera análises comparativas detalhadas."
+        }
+      ]
+    }
+  },
+  "fitcoach": {
+    "meta": {
+      "title": "FitCoach - App para Personal Trainers",
+      "description": "Aplicativo completo para personal trainers gerenciarem treinos, clientes e progressos",
+      "keywords": "personal trainer, app fitness, gerenciamento treinos, clientes"
+    },
+    "badge": "Fitness • Gestão",
+    "title": "FitCoach",
+    "subtitle": "Aplicação web moderna (SPA) desenvolvida em React/TypeScript que conecta personal trainers e alunos através de uma plataforma centralizada para gestão completa de atividades fitness.",
+    "cta": {
+      "title": "Comece Hoje Mesmo",
+      "description": "Junte-se a centenas de personal trainers que já transformaram seus negócios com o FitCoach."
+    },
+    "hero": {
+      "title": "Arquitetura Técnica Avançada",
+      "description": "Single Page Application (SPA) construída com React/TypeScript, Vite, Tailwind CSS e Supabase para máxima performance e escalabilidade."
+    },
+    "features": [
+      {
+        "title": "Gestão Completa de Alunos",
+        "description": "Sistema robusto para cadastro, acompanhamento e gestão de alunos com hooks personalizados (useStudents) e interface intuitiva."
+      },
+      {
+        "title": "Planos Alimentares Inteligentes",
+        "description": "Criação e gestão de planos alimentares com hook dedicado (useDietPlans) e componentes especializados em nutrição."
+      },
+      {
+        "title": "Agendamento de Sessões",
+        "description": "Sistema completo de agendamentos com hook useSessions, diálogos interativos e gerenciamento de horários em tempo real."
+      },
+      {
+        "title": "Autenticação Segura",
+        "description": "Sistema robusto de autenticação com Supabase, proteção de rotas e gerenciamento de sessões de usuários."
+      },
+      {
+        "title": "Dashboards Especializados",
+        "description": "Painéis dedicados para administradores, treinadores e alunos com métricas em tempo real e relatórios detalhados."
+      },
+      {
+        "title": "Interface Moderna",
+        "description": "UI/UX desenvolvida com Shadcn/UI e Tailwind CSS, garantindo responsividade e experiência premium em todos os dispositivos."
+      }
+    ],
+    "architecture": {
+      "title": "Arquitetura e Organização",
+      "description": "Estrutura modular e escalável que facilita desenvolvimento e manutenção do código.",
+      "components": {
+        "title": "Estrutura de Componentes",
+        "items": [
+          {
+            "title": "📁 components/ui/",
+            "description": "Componentes base reutilizáveis do Shadcn/UI (Button, Card, Input, etc.)"
+          },
+          {
+            "title": "📁 components/auth/",
+            "description": "Sistema de autenticação com proteção de rotas e gerenciamento de sessões"
+          },
+          {
+            "title": "📁 components/trainer/",
+            "description": "Componentes específicos para interface do treinador"
+          },
+          {
+            "title": "📁 components/admin/",
+            "description": "Painel administrativo com gestão de treinadores"
+          }
+        ]
+      },
+      "hooks": {
+        "title": "Hooks Personalizados",
+        "items": [
+          {
+            "title": "useStudents.ts",
+            "description": "Gerencia estado e lógica para manipulação de dados de alunos"
+          },
+          {
+            "title": "useDietPlans.ts",
+            "description": "Centraliza a complexidade do gerenciamento de planos alimentares"
+          },
+          {
+            "title": "useSessions.ts",
+            "description": "Simplifica agendamentos e manipulação de sessões"
+          },
+          {
+            "title": "useTrainersManagement.ts",
+            "description": "Gerenciamento administrativo de treinadores"
+          }
+        ]
+      },
+      "supabase": {
+        "title": "Integração Supabase",
+        "items": [
+          {
+            "title": "Autenticação",
+            "description": "Sistema seguro de login e registro com gerenciamento de sessões"
+          },
+          {
+            "title": "Banco de Dados",
+            "description": "PostgreSQL com migrações versionadas e tipos TypeScript"
+          },
+          {
+            "title": "APIs em Tempo Real",
+            "description": "Sincronização automática de dados entre cliente e servidor"
+          }
+        ]
+      }
+    },
+    "techStack": {
+      "title": "Stack Tecnológico",
+      "description": "Tecnologias modernas e confiáveis que garantem performance, segurança e facilidade de manutenção.",
+      "items": [
+        { "metric": "React", "description": "Framework moderno com TypeScript" },
+        { "metric": "Supabase", "description": "Backend-as-a-Service completo" },
+        { "metric": "Vite", "description": "Ferramenta de build ultra-rápida" },
+        { "metric": "Tailwind", "description": "Framework CSS otimizado" }
+      ]
+    },
+    "testimonials": {
+      "title": "Depoimentos de Usuários",
+      "description": "Veja o que personal trainers estão falando sobre sua experiência com o FitCoach.",
+      "items": [
+        {
+          "name": "Rafael Santos",
+          "role": "Personal Trainer",
+          "comment": "O FitCoach revolucionou a forma como trabalho! Consigo gerenciar 60 alunos com facilidade e eles adoram o acompanhamento personalizado."
+        },
+        {
+          "name": "Marina Oliveira",
+          "role": "Personal Trainer & Nutricionista",
+          "comment": "A plataforma é intuitiva e completa. Meus alunos podem acompanhar o progresso em tempo real e isso aumentou muito a motivação deles!"
+        }
+      ]
+    }
+  },
+  "barbernow": {
+    "meta": {
+      "title": "BarberNow - Sistema para Barbearias",
+      "description": "Sistema completo de gestão para barbearias com agendamento online, controle financeiro e clientes",
+      "keywords": "sistema barbearia, agendamento online, gestão salão, controle financeiro"
+    },
+    "badge": "Beleza • Gestão",
+    "title": "BarberNow",
+    "subtitle": "Solução completa para barbearias modernas com agendamento online, controle de fila e gestão financeira que revoluciona o atendimento ao cliente.",
+    "cta": {
+      "title": "Revolucione Sua Barbearia",
+      "description": "Junte-se a centenas de barbearias que já modernizaram seus negócios com o BarberNow."
+    },
+    "hero": {
+      "title": "Modernize Sua Barbearia",
+      "description": "Transforme sua barbearia em um negócio digital com tecnologia de ponta e experiência superior para seus clientes."
+    },
+    "features": [
+      {
+        "title": "Sistema de Agendamento",
+        "description": "Solução completa para gestão de agendamentos em barbearias modernas."
+      },
+      {
+        "title": "Fila QR Code",
+        "description": "Clientes fazem check-in via QR Code com estimativa precisa de tempo de atendimento."
+      },
+      {
+        "title": "Gestão Completa da Equipe",
+        "description": "Controle de horários, comissões automáticas e avaliação de desempenho dos barbeiros."
+      },
+      {
+        "title": "Controle de Estoque",
+        "description": "Gerenciamento automatizado de produtos com alertas de reposição e vendas no balcão."
+      },
+      {
+        "title": "Marketing Automático",
+        "description": "Campanhas SMS e WhatsApp com cupons de desconto e promoções personalizadas."
+      },
+      {
+        "title": "Dashboard Financeiro",
+        "description": "Relatórios completos de faturamento, comissões e análise de lucratividade por serviço."
+      }
+    ],
+    "benefits": {
+      "title": "Resultados Comprovados",
+      "description": "Barbearias que usam o BarberNow veem melhorias significativas em pouco tempo.",
+      "metrics": [
+        { "metric": "50%", "description": "Redução no tempo de espera" },
+        { "metric": "30%", "description": "Aumento na satisfação" },
+        { "metric": "25%", "description": "Mais agendamentos" },
+        { "metric": "40%", "description": "Economia operacional" }
+      ]
+    },
+    "testimonials": {
+      "title": "O Que Nossos Clientes Dizem",
+      "description": "",
+      "items": [
+        {
+          "name": "Carlos Silva",
+          "role": "Proprietário - Barbearia Elite",
+          "comment": "O BarberNow organizou completamente minha barbearia. Zero confusão com horários!"
+        },
+        {
+          "name": "Roberto Santos", 
+          "role": "Barbeiro Freelancer",
+          "comment": "Consegui dobrar minha clientela usando as campanhas automáticas. Incrível!"
+        }
+      ]
+    }
+  },
+  "lovelynails": {
+    "meta": {
+      "title": "LovelyNails - Sistema para Salões de Unhas",
+      "description": "Plataforma de gestão especializada para salões de unhas com agendamento e controle de serviços",
+      "keywords": "sistema salão unhas, manicure, agendamento, gestão estética"
+    },
+    "badge": "Beleza • Gestão",
+    "title": "LovelyNails",
+    "subtitle": "Plataforma especializada para estúdios de unhas decoradas com agendamento inteligente, portfólio digital e gestão financeira completa.",
+    "cta": {
+      "title": "Transforme Seu Estúdio",
+      "description": "Descubra como centenas de nail designers já aumentaram sua receita com o LovelyNails."
+    },
+    "hero": {
+      "title": "Para Estúdios de Unhas Profissionais",
+      "description": "Plataforma completa que conecta nail designers e clientes com tecnologia especializada para o mercado de nail art."
+    },
+    "features": [
+      {
+        "title": "Portfólio Digital Profissional",
+        "description": "Galeria integrada para exibir trabalhos com categorização por técnicas e estilos."
+      },
+      {
+        "title": "Agendamento por Complexidade",
+        "description": "Sistema que calcula tempo de serviço baseado na complexidade do design escolhido."
+      },
+      {
+        "title": "Catálogo de Designs",
+        "description": "Biblioteca com centenas de referências organizadas por técnicas, cores e ocasiões."
+      },
+      {
+        "title": "Gestão de Materiais",
+        "description": "Controle específico para esmaltes, géis, adesivos e ferramentas especializadas."
+      },
+      {
+        "title": "Precificação Inteligente",
+        "description": "Calculadora automática de preços baseada em tempo, materiais e complexidade."
+      },
+      {
+        "title": "Marketing Visual",
+        "description": "Campanhas automáticas com foco em imagens dos trabalhos realizados."
+      }
+    ],
+    "benefits": {
+      "title": "Resultados Impressionantes",
+      "description": "Nail designers profissionais que adotaram o LovelyNails transformaram completamente seus negócios.",
+      "metrics": [
+        { "metric": "60%", "description": "Aumento na receita média" },
+        { "metric": "45%", "description": "Mais agendamentos mensais" },
+        { "metric": "80%", "description": "Redução de cancelamentos" },
+        { "metric": "35%", "description": "Economia de tempo" }
+      ]
+    },
+    "testimonials": {
+      "title": "Depoimentos de Profissionais",
+      "description": "Veja como o LovelyNails está transformando estúdios de unhas em todo o país.",
+      "items": [
+        {
+          "name": "Amanda Costa",
+          "role": "Nail Designer Premium",
+          "comment": "Meu faturamento dobrou! As clientes adoram escolher os designs pelo app."
+        },
+        {
+          "name": "Juliana Rodrigues",
+          "role": "Proprietária - Nail Studio",
+          "comment": "A gestão ficou muito mais profissional. Controlo tudo pelo smartphone!"
+        }
+      ]
+    }
+  },
+  "ondemand": {
+    "meta": {
+      "title": "OnDemand - Marketplace de Serviços",
+      "description": "Plataforma marketplace conectando prestadores de serviços e clientes de forma rápida e eficiente",
+      "keywords": "marketplace serviços, plataforma digital, prestadores serviços, economia colaborativa"
+    },
+    "badge": "Logística • SaaS",
+    "title": "OnDemand",
+    "subtitle": "Plataforma B2B para empresas que precisam de entregas rápidas, conectando automaticamente com múltiplas transportadoras e otimizando custos.",
+    "cta": {
+      "title": "Otimize Suas Entregas",
+      "description": "Reduza custos e aumente a satisfação dos seus clientes com nossa plataforma inteligente."
+    },
+    "hero": {
+      "title": "Entregas Inteligentes para Empresas",
+      "description": "Sistema B2B que conecta sua empresa às melhores transportadoras, otimizando automaticamente rotas, custos e prazos."
+    },
+    "features": [
+      {
+        "title": "Múltiplas Transportadoras",
+        "description": "Integração automática com Correios, transportadoras regionais e entregadores locais."
+      },
+      {
+        "title": "Otimização de Custos",
+        "description": "IA que seleciona automaticamente a melhor opção de entrega por preço e prazo."
+      },
+      {
+        "title": "Rastreamento Unificado",
+        "description": "Acompanhamento em tempo real de todas as entregas em uma única interface."
+      },
+      {
+        "title": "API Completa",
+        "description": "Integração total com sistemas ERP, e-commerce e plataformas de gestão."
+      },
+      {
+        "title": "Dashboard Executivo",
+        "description": "Relatórios avançados de performance, custos e SLA das entregas."
+      },
+      {
+        "title": "SLA Garantido",
+        "description": "Monitoramento contínuo e alertas automáticos para garantir prazos."
+      }
+    ],
+    "benefits": {
+      "title": "Impacto nos Negócios",
+      "description": "Empresas que implementaram o OnDemand reduziram drasticamente custos logísticos e aumentaram satisfação.",
+      "metrics": [
+        { "metric": "35%", "description": "Redução nos custos de frete" },
+        { "metric": "50%", "description": "Menos reclamações de entrega" },
+        { "metric": "25%", "description": "Aumento na conversão" },
+        { "metric": "90%", "description": "Entregas no prazo" }
+      ]
+    },
+    "testimonials": {
+      "title": "Cases de Sucesso",
+      "description": "Veja como empresas de diferentes segmentos otimizaram suas operações logísticas.",
+      "items": [
+        {
+          "name": "Marcos Oliveira",
+          "role": "Diretor Comercial - TechStore",
+          "comment": "Reduzimos 40% dos custos logísticos e as reclamações de entrega praticamente sumiram."
+        },
+        {
+          "name": "Patricia Lima",
+          "role": "Gerente de E-commerce - ModaFashion",
+          "comment": "A integração foi perfeita! Agora oferecemos múltiplas opções de entrega automaticamente."
+        }
+      ]
+    }
+  }
+}

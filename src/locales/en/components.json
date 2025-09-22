@@ -1,0 +1,47 @@
+{
+  "footer": {
+    "description": "TurnBold is a US-based provider of AI, Virtual CRM and COBOL services, aimed at helping small business owners take their businesses to the next level.",
+    "siteMap": "Site Map",
+    "navigation": {
+      "home": "Home",
+      "about": "About Us",
+      "projects": "Projects",
+      "subscriptions": "Subscriptions",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "policies": "Our Policies",
+    "legal": {
+      "termsConditions": "Terms and Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "refundPolicy": "Refund Policy",
+      "legalNotice": "Legal Notice"
+    },
+    "addresses": "Our Addresses",
+    "usa": {
+      "country": "USA",
+      "ein": "EIN 37-2157287",
+      "company": "TurnBold, LLC",
+      "address1": "131 Continental Dr, Suite 305",
+      "address2": "Newark - DW, Zip code 19713",
+      "phone": "Tel: 866-767-5850",
+      "email": "contact@turnboldwt.com"
+    },
+    "copyright": "TurnBold WT © 2025. All Rights Reserved."
+  },
+  "lgpdBanner": {
+    "message": "This site uses cookies to improve your experience. By continuing to browse, you agree to our",
+    "privacyPolicy": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "languageSelector": {
+    "label": "Language",
+    "languages": {
+      "pt-BR": "Português (BR)",
+      "en": "English",
+      "es": "Español"
+    }
+  }
+}
