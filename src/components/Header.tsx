@@ -6,7 +6,6 @@ import { Menu, X, LogIn, LogOut } from '@/components/icons';
 import { supabase } from '@/integrations/supabase/client';
 import { Session } from '@supabase/supabase-js';
 import { LanguageSelector } from '@/components/LanguageSelector';
-import logo from '@/assets/images/logo-turnbold.png';
 
 interface HeaderProps {
   alwaysSolid?: boolean;
@@ -63,7 +62,7 @@ const Header = ({ alwaysSolid = false }: HeaderProps) => {
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src={logo} 
+              src="https://www.turnbold.co/lovable-uploads/bcc0230e-f449-447d-a010-312eb2fd551f.png" 
               alt="TurnBold"
               className="h-12 w-auto"
             />

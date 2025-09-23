@@ -15,7 +15,6 @@ import { toast } from 'sonner';
 import type { Database } from '@/integrations/supabase/types';
 import FormDetails from '@/components/FormDetails';
 import { cn } from '@/lib/utils';
-import logo from '@/assets/images/logo-turnbold.png';
 
 type FormStatus = 'new' | 'read' | 'responded' | 'archived';
 type Form = Database['public']['Views']['all_forms']['Row'] & { status: FormStatus };
@@ -44,7 +43,7 @@ const DemoSidebar = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (isOpe
       <div className={cn('fixed inset-0 bg-black/60 z-30 md:hidden', isOpen ? 'block' : 'hidden')} onClick={() => setIsOpen(false)} />
       <aside className={cn('fixed top-0 left-0 h-full w-64 bg-turnbold-dark text-white flex flex-col p-4 z-40 transition-transform duration-300 ease-in-out md:relative md:translate-x-0', isOpen ? 'translate-x-0' : '-translate-x-full')}>
         <div className="flex items-center justify-between py-4 mb-8">
-          <img src={logo} alt="TurnBold" className="h-12 w-auto" />
+          <img src="https://www.turnbold.co/lovable-uploads/bcc0230e-f449-447d-a010-312eb2fd551f.png" alt="TurnBold" className="h-12 w-auto" />
           <Button variant="ghost" size="icon" className="md:hidden text-white" onClick={() => setIsOpen(false)}><X className="w-6 h-6" /></Button>
         </div>
         <nav className="flex-grow">
@@ -135,7 +134,7 @@ const DemoCustomerService = () => {
       <div className="flex-1 flex flex-col">
         <header className="md:hidden bg-white border-b border-gray-200 p-4 flex items-center justify-between">
           <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(true)}><PanelLeft className="h-6 w-6" /></Button>
-          <img src={logo} alt="TurnBold" className="h-8 w-auto" />
+          <img src="https://www.turnbold.co/lovable-uploads/bcc0230e-f449-447d-a010-312eb2fd551f.png" alt="TurnBold" className="h-8 w-auto" />
         </header>
         <main className="flex-1 p-4 md:p-8 overflow-y-auto">
           <div className="space-y-6">

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Instagram } from '@/components/icons';
-import logo from '@/assets/images/logo-turnbold.png';
 
 const Footer = () => {
   const { t } = useTranslation('components');
@@ -13,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src={logo} 
+                src="https://www.turnbold.co/lovable-uploads/bcc0230e-f449-447d-a010-312eb2fd551f.png" 
                 alt="TurnBold"
                 className="h-10 w-auto"
               />
