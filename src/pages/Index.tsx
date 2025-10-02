@@ -163,7 +163,7 @@ const Index = () => {
       company: t('index.testimonials.items.0.company'),
       comment: t('index.testimonials.items.0.comment'),
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+      image: 'https://i.postimg.cc/j2G3RnDG/homem-projeto.png',
       result: t('index.testimonials.items.0.result')
     },
     {
@@ -481,29 +481,29 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 card-hover relative overflow-hidden shadow-2xl rounded-3xl bg-white">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-turnbold-green via-turnbold-yellow to-orange-500"></div>
-                <CardContent className="p-10">
+                <CardContent className="p-10 flex flex-col h-full">
                   <div className="flex mb-6 justify-center">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} size={24} className="text-turnbold-yellow fill-current" />
                     ))}
                   </div>
-                  <p className="text-turnbold-text mb-8 italic text-base leading-relaxed text-center font-medium">
+                  <p className="text-turnbold-text mb-8 italic text-base leading-relaxed text-center font-medium flex-grow">
                     "{testimonial.comment}"
                   </p>
-                  <div className="flex items-center justify-between">
+                  <div className="space-y-4">
                     <div className="flex items-center">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
-                        className="w-16 h-16 rounded-full mr-4 object-cover shadow-lg"
+                        className="w-16 h-16 rounded-full mr-4 object-cover shadow-lg flex-shrink-0"
                       />
-                      <div>
+                      <div className="flex-1">
                         <p className="font-bold text-turnbold-dark text-sm">{testimonial.name}</p>
                         <p className="text-xs text-turnbold-text">{testimonial.role}</p>
                         <p className="text-xs text-turnbold-text font-semibold">{testimonial.company}</p>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="flex justify-center">
                       <Badge className="bg-gradient-to-r from-turnbold-green to-green-600 text-white font-bold px-4 py-2">
                         {testimonial.result}
                       </Badge>
